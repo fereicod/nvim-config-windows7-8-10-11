@@ -51,6 +51,7 @@ Cuando te salga este mensaje en la terminal:
 > Do you want to run the script?([Y]es/[A]ll - yes to all/[N]o/[P]rint): 
 
 Debes digitar la letra **N** y dar un enter para así aceptar todos los permisos y finalizar con la instalación de Neovim junto al gestor de paquetes Chocolatey.
+
 ![]()
 
 ### Paso No. 3. Instalar Git.
@@ -62,9 +63,6 @@ Node.js es un entorno en tiempo de ejecución multiplataforma, de código abiert
 Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nodejs.org/es/download/"), este enlace te llevará directamente a su pagina oficial de descargar, si requieres más información de instalación, visualizate un video en **YouTube**.
 
 ### Paso No. 5. Descaga los archivos del presente repositorio.
-Mira como se ve neovim:
-![]()
-
 **¿Te gustaría tener neovim como lo tengo yo?.** Si tu respuesta es **SÍ** deberás descargarte los archivos de este repositorio ya que son necesarios para que Neovim tenga una buena interfaz y tengas las mismas funcionalidad, atajos y plugins que estoy utilizando yo. Una vez se haya descargado debes extraer el .zip; luego, a la carpeta generada debes cambiarle el nombre, te aparecerá así: "nvim-config-windows10-neovim", debes cambiarle ese por: "nvim". Posteriormente, corta o copia esa carpeta y dirigete a la ruta donde se instlao neovim, en mi caso fue:
 **C:\Users\Administrador\AppData\Local**, debe ser la misma ruta tuya solo que cambia el nombre de usuario, guíate con ella.
 
@@ -76,9 +74,11 @@ Para finalizar con toda la configuración, solo falta una pequeña cosa y es abr
 Para abrir neovim debes abrir la terminal instalada, luego ya sea en la pestaña de PowerShell o Simbolo del sistema, debes ubicarte en la ruta donde se está instalado neovim; mi ruta es ¡Deber ser la misma tuya solo que cambia el nombre de usuario!: **C:\Users\Administrador\AppData\Local\nvim**
 
 Cuando estes ahí debes ingresar el siguiente comando y dar enter:
-> nvim init.vim
-
+   ```sh
+   nvim init.vim
+   ``` 
 Añado captura de pantalla
+
 ![]()
 
 Así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como hacerlo.
