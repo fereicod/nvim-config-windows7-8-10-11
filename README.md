@@ -51,6 +51,7 @@ Cuando te salga este mensaje en la terminal:
 > Do you want to run the script?([Y]es/[A]ll - yes to all/[N]o/[P]rint): 
 
 Debes digitar la letra **N** y dar un enter para así aceptar todos los permisos y finalizar con la instalación de Neovim junto al gestor de paquetes Chocolatey.
+![]()
 
 ### Paso No. 3. Instalar Git.
 Git es un software de control de versiones diseñado por **Linus Torvalds** quién es él mismo creador del Sistema Operativo **LINUX**, fue pensado en la eficiencia, la confiabilidad y compatibilidad para mantenimientos de versiones; para realizar la instalación de **git** da un [click aquí](https://git-scm.com/downloads "https://git-scm.com/downloads"), este es un enlace que te llevará a la pagina oficial de **Git.**, si no lo tienes instalado deberás intalararlo para que neovim no te arroje errores al momento de iniciarlo. Por otra parte, si usted ya lo tiene instalado haga caso omiso a este paso y continue con los restantes.
@@ -71,11 +72,19 @@ Una vez estes ubicado en el fichero **Local** busca si hay una carpeta con el no
 
 Para finalizar con toda la configuración, solo falta una pequeña cosa y es abrir nvim desde la terminal para ellos deberás ubicarte en la ruta de instalación Neovim desde la terminal, la ruta es: **C:\Users\(tu-nombre-de-usuario)\AppData\Local\nvim\**
 
-....
+### Paso No. 6. Abre Neovim
+Para abrir neovim debes abrir la terminal instalada, luego ya sea en la pestaña de PowerShell o Simbolo del sistema, debes ubicarte en la ruta donde se está instalado neovim; mi ruta es ¡Deber ser la misma tuya solo que cambia el nombre de usuario!: **C:\Users\Administrador\AppData\Local\nvim**
+
+Cuando estes ahí debes ingresar el siguiente comando y dar enter:
+> nvim init.vim
+
+Añado captura de pantalla
+![]()
+
 Así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como hacerlo.
 
-![](https://pbs.twimg.com/media/E8ZaddIXsCA-Ott?format=png&name=medium)
+![]()
 
-![](https://pbs.twimg.com/media/E8ZadT4X0AIrvCT?format=png&name=medium)
+![]()
 
-![](https://pbs.twimg.com/media/E8ZadWGXsA0HvpJ?format=png&name=medium)
+![]()
