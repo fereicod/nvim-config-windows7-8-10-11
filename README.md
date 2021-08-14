@@ -1,5 +1,5 @@
 <p align="center"><a href="https://twitter.com/Josueromram/" target="_blank">
-    <img src="https://pbs.twimg.com/media/E8ZadT0XsAcC_ff?format=jpg&name=large">
+    <img src="https://pbs.twimg.com/media/E8yYymPWUAAju32?format=jpg&name=large">
 </a></p>
 
 # Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 Agosto, 2021.
@@ -79,12 +79,12 @@ Cuando estes ahí debes ingresar el siguiente comando y dar enter:
    ``` 
 Añado captura de pantalla
 
-![]()
+![](https://pbs.twimg.com/media/E8j_3-fXEAcSFbH?format=png&name=small)
 
-Así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como hacerlo.
+Y así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
 
-![]()
+![](https://pbs.twimg.com/media/E8yYyhuXoAA2wRP?format=png&name=large)
 
-![]()
+![](https://pbs.twimg.com/media/E8yYyhvXMAIzjcC?format=png&name=900x900)
 
-![]()
+![](https://pbs.twimg.com/media/E8yYykBXEAMvB7f?format=png&name=900x900)
