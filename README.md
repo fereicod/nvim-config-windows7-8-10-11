@@ -2,7 +2,7 @@
     <img src="https://pbs.twimg.com/media/E8yYymPWUAAju32?format=jpg&name=large">
 </a></p>
 
-# Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 Agosto, 2021.
+# Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 June, 2021.
 
 ## Introducción.
 En el presente proyecto se describe el proceso a seguir para personalizar e instalar **NEOVIM** en su versión más reciente 0.5.0 2021, proyecto realizado tras la devaluación e ineficiencia de instalaciones que hay sobre neovim en español para el sistema operativo **Windows 8, 10 y 11**, gran parte de los programadores profesionales utilizan este editor de código muy profesional. Asimismo este estudio de elaboración propia revela la calidad de instalación, configuración y personalización. Para una mejor comprensión del presente informe debe enfocarse y descargar cada una de las herramientas inicializadas a continuación:
@@ -14,8 +14,9 @@ En el presente proyecto se describe el proceso a seguir para personalizar e inst
 3. Instalar **Git**
 4. Instalar **Node.js**
 5. Descargar archivos publicados en **este repositorio**
+6. Instalar el gestor de plugins **vim plug**
 
-**Tenga en cuenta que:** para instalar Neovim, si o si necesitará utilizar todas esas 5 herramientas, para ello aquí conocerás el paso a paso para instalar cada una correctamente sin errores ni falsa información, cabe mensionar que, Windows PowerShell viene instalado de fabrica en el S.O windows, por eso no será necesario explicar el como ejecutarlo ni instalarlo ¡¡esto usted ya debe saberlo!!.
+**Tenga en cuenta que:** para instalar Neovim, si o si necesitarás utilizar todas esas 6 herramientas, para ello aquí conocerás el paso a paso para instalar cada una correctamente sin errores ni falsa información, cabe mensionar que, Windows PowerShell viene instalado de fabrica en el S.O windows, por eso no será necesario explicar el como ejecutarlo, ni instalarlo, ni abrirlo ¡¡eso ya usted debe saberlo!!.
 
 # Paso a paso para la instalación de NeoVim.
 ### Paso No. 1. Instalar Windows Terminal.
@@ -61,8 +62,8 @@ Node.js es un entorno en tiempo de ejecución multiplataforma, de código abiert
 
 Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nodejs.org/es/download/"), este enlace te llevará directamente a su pagina oficial de descargar, si requieres más información de instalación, visualizate un video en **YouTube**.
 
-### Paso No. 5. Descaga los archivos del presente repositorio.
-Esta es la personalización que tengo en nvim:
+### Paso No. 5. Descarga los archivos de este repositorio.
+Esta es la personalización que actualmente tengo en neovim:
 
 ![](https://pbs.twimg.com/media/E8yYyhuXoAA2wRP?format=png&name=large)
 
@@ -94,7 +95,7 @@ Solo debes presionar enter hasta que te arroje el código del archivo **init.vim
 
 Posteriormente, ya que estas ubicado ahí debes intalar el gestor de plugins **vim plug**.
 
-## Paso No. 7. Instalar el gestor de plugins VIM PLUG
+### Paso No. 7. Instalar el gestor de plugins VIM PLUG
 Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga exitosa deberás dirigirte a el repositorios oficial, dando un [click aquí](https://github.com/junegunn/vim-plug#windows-powershell-1 "github.com/junegunn/vim-plug"),
 
 Y así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
