@@ -41,6 +41,7 @@ Y por último ejecuta este comando, ya que define la instalación de Chocolatey:
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
    ```
 Añado una captura de pantalla, esto es lo que debe devolver el comando utilizado.
+
 ![](https://pbs.twimg.com/media/E8ZakdaXsAAwiBY?format=png&name=medium)
 
 Ahora copia y pega este comando para instalar neovim en su versión 0.5.0 o la más reciente que haya cuándo la valles a instalar.
@@ -50,9 +51,7 @@ Ahora copia y pega este comando para instalar neovim en su versión 0.5.0 o la m
 Cuando te salga este mensaje en la terminal: 
 > Do you want to run the script?([Y]es/[A]ll - yes to all/[N]o/[P]rint): 
 
-Debes digitar la letra **N** y dar un enter para así aceptar todos los permisos y finalizar con la instalación de Neovim junto al gestor de paquetes Chocolatey.
-
-![]()
+Debes digitar la letra **A** y dar un enter para así aceptar todos los permisos y finalizar con la instalación de Neovim junto al gestor de paquetes Chocolatey.
 
 ### Paso No. 3. Instalar Git.
 Git es un software de control de versiones diseñado por **Linus Torvalds** quién es él mismo creador del Sistema Operativo **LINUX**, fue pensado en la eficiencia, la confiabilidad y compatibilidad para mantenimientos de versiones; para realizar la instalación de **git** da un [click aquí](https://git-scm.com/downloads "https://git-scm.com/downloads"), este es un enlace que te llevará a la pagina oficial de **Git.**, si no lo tienes instalado deberás intalararlo para que neovim no te arroje errores al momento de iniciarlo. Por otra parte, si usted ya lo tiene instalado haga caso omiso a este paso y continue con los restantes.
@@ -63,6 +62,10 @@ Node.js es un entorno en tiempo de ejecución multiplataforma, de código abiert
 Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nodejs.org/es/download/"), este enlace te llevará directamente a su pagina oficial de descargar, si requieres más información de instalación, visualizate un video en **YouTube**.
 
 ### Paso No. 5. Descaga los archivos del presente repositorio.
+Esta es la personalización que tengo en nvim:
+
+![](https://pbs.twimg.com/media/E8yYyhuXoAA2wRP?format=png&name=large)
+
 **¿Te gustaría tener neovim como lo tengo yo?.** Si tu respuesta es **SÍ** deberás descargarte los archivos de este repositorio ya que son necesarios para que Neovim tenga una buena interfaz y tengas las mismas funcionalidad, atajos y plugins que estoy utilizando yo. Una vez se haya descargado debes extraer el .zip; luego, a la carpeta generada debes cambiarle el nombre, te aparecerá así: "nvim-config-windows10-neovim", debes cambiarle ese por: "nvim". Posteriormente, corta o copia esa carpeta y dirigete a la ruta donde se instlao neovim, en mi caso fue:
 **C:\Users\Administrador\AppData\Local**, debe ser la misma ruta tuya solo que cambia el nombre de usuario, guíate con ella.
 
@@ -77,13 +80,24 @@ Cuando estes ahí debes ingresar el siguiente comando y dar enter:
    ```sh
    nvim init.vim
    ``` 
-Añado captura de pantalla
+Y dar enter para abri neovim en la ruta situada, adjunto una captura de pantalla
 
 ![](https://pbs.twimg.com/media/E8j_3-fXEAcSFbH?format=png&name=small)
 
-Y así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
+Luego de esto, te arrojará varios errores, como estos:
 
-![](https://pbs.twimg.com/media/E8yYyhuXoAA2wRP?format=png&name=large)
+![](https://pbs.twimg.com/media/E8j_38KX0AMQX5c?format=png&name=900x900)
+
+Solo debes presionar enter hasta que te arroje el código del archivo **init.vim**, te hablo una pantalla similar a la del capture, para que te ubiques:
+
+![](https://pbs.twimg.com/media/E8j_35NWYAE38Fo?format=png&name=900x900)
+
+Posteriormente, ya que estas ubicado ahí debes intalar el gestor de plugins **vim plug**.
+
+## Paso No. 7. Instalar el gestor de plugins VIM PLUG
+Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga exitosa deberás dirigirte a el repositorios oficial, dando un [click aquí](https://github.com/junegunn/vim-plug#windows-powershell-1 "github.com/junegunn/vim-plug"),
+
+Y así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
 
 ![](https://pbs.twimg.com/media/E8yYyhvXMAIzjcC?format=png&name=900x900)
 
