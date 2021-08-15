@@ -1,5 +1,5 @@
 <p align="center"><a href="https://twitter.com/Josueromram/" target="_blank">
-    <img src="https://pbs.twimg.com/media/E8yYymPWUAAju32?format=jpg&name=large">
+    <img src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/autoload/Logo%20nvim(1).png">
 </a></p>
 
 # Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 June, 2021.
@@ -67,21 +67,21 @@ Esta es la personalización que actualmente tengo en neovim:
 
 ![](https://pbs.twimg.com/media/E8yYyhuXoAA2wRP?format=png&name=large)
 
-**¿Te gustaría tener neovim como lo tengo yo?.** Si tu respuesta es **SÍ** deberás descargarte los archivos de este repositorio ya que son necesarios para que Neovim tenga una buena interfaz y tengas las mismas funcionalidad, atajos y plugins que estoy utilizando yo. Una vez se haya descargado debes extraer el .zip; luego, a la carpeta generada debes cambiarle el nombre, te aparecerá así: "nvim-config-windows10-neovim", debes cambiarle ese por: "nvim". Posteriormente, corta o copia esa carpeta y dirigete a la ruta donde se instlao neovim, en mi caso fue:
-**C:\Users\Administrador\AppData\Local**, debe ser la misma ruta tuya solo que cambia el nombre de usuario, guíate con ella.
+**¿Te gustaría tener neovim como lo tengo yo?.** Si tu respuesta es **SÍ** deberás descargarte los archivos de este repositorio ya que son necesarios para que Neovim tenga una buena interfaz y las mismas funcionalidades, atajos y plugins que estoy utilizando yo. Una vez se haya descargado debes extraer el .zip; luego, a la carpeta generada debes cambiarle el nombre, te aparecerá:
 
-Una vez estes ubicado en el fichero **Local** busca si hay una carpeta con el nombre *nvim-data*, si la encuentras quiere decir que has instalado neovim correctamente. Ahora bien, tambien encontrarás otra carpeta pero con el nombre *nvim*, esa si deberás eliminarla y pegar la que habías cortado anteriormente ya que esa contiene toda la personalización configuración y atajos que yo domino.
+> nvim-config-windows10-neovim
 
-Para finalizar con toda la configuración, solo falta una pequeña cosa y es abrir nvim desde la terminal para ellos deberás ubicarte en la ruta de instalación Neovim desde la terminal, la ruta es: **C:\Users\(tu-nombre-de-usuario)\AppData\Local\nvim\**
+Debes cambiarle ese por:
 
-### Paso No. 6. Abre Neovim
-Para abrir neovim debes abrir la terminal instalada, luego ya sea en la pestaña de PowerShell o Simbolo del sistema, debes ubicarte en la ruta donde se está instalado neovim; mi ruta es ¡Deber ser la misma tuya solo que cambia el nombre de usuario!: **C:\Users\Administrador\AppData\Local\nvim**
+> nvim
 
-Cuando estes ahí debes ingresar el siguiente comando y dar enter:
+Ahora bien, corta esa carpeta 'nvim' y dirigete a la ruta donde se instlao neovim, en mi caso fue: **C:\Users\Administrador\AppData\Local**, debe ser la misma ruta tuya solo que cambia el nombre de usuario nada más. Una vez estes ubicado en el fichero **Local** revisa si hay una carpeta con el nombre *nvim-data*, si la encuentras quiere decir que has instalado neovim correctamente. Posteriormente, pega la carpeta cortada *nvim* en la carpeta **Local**, esa carpeta contiene toda la personalización, configuración y atajos que yo manejo, para conocer los atajos, abrete y leete el archivo que está dentro de la carpeta **nvim/config/maps.vim**.
+
+Para abrir neovim debes ejecutar un comando sencillo en la terminal, luego ya sea en la pestaña de PowerShell o Simbolo del sistema, debes ubicarte en la ruta donde se está instalado neovim; mi ruta ¡debe ser la misma tuya solo que cambia el nombre de usuario!: **C:\Users\Administrador\AppData\Local\nvim**. Cuando estes ahí debes ingresar el siguiente comando y dar enter:
    ```sh
    nvim init.vim
    ``` 
-Y dar enter para abri neovim en la ruta situada, adjunto una captura de pantalla
+Y dar enter para abri neovim en la ruta situada, adjunto una captura de pantalla:
 
 ![](https://pbs.twimg.com/media/E8j_3-fXEAcSFbH?format=png&name=small)
 
@@ -89,16 +89,19 @@ Luego de esto, te arrojará varios errores, como estos:
 
 ![](https://pbs.twimg.com/media/E8j_38KX0AMQX5c?format=png&name=900x900)
 
-Solo debes presionar enter hasta que te arroje el código del archivo **init.vim**, te hablo una pantalla similar a la del capture, para que te ubiques:
+Para saltar esos errores debes presionar enter hasta que te arroje el código del archivo **init.vim**, te hablo de una pantalla similar a la del capture, para que te ubiques:
 
 ![](https://pbs.twimg.com/media/E8j_35NWYAE38Fo?format=png&name=900x900)
 
-Posteriormente, ya que estas ubicado ahí debes intalar el gestor de plugins **vim plug**.
+Para terminar, solo falta intalar el gestor de plugins **vim plug**.
 
-### Paso No. 7. Instalar el gestor de plugins VIM PLUG
-Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga exitosa deberás dirigirte a el repositorios oficial, dando un [click aquí](https://github.com/junegunn/vim-plug#windows-powershell-1 "github.com/junegunn/vim-plug"),
+### Paso No. 6. Instalar el gestor de plugins VIM PLUG
+Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga limpia u ligera; dirigirte a el repositorios oficial, dando un [click aquí](https://github.com/junegunn/vim-plug#windows-powershell-1 "github.com/junegunn/vim-plug"),
 
-Y así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
+
+**Falta solo un poco para finalizar esta guía de instalación**.
+
+Así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
 
 ![](https://pbs.twimg.com/media/E8yYyhvXMAIzjcC?format=png&name=900x900)
 
