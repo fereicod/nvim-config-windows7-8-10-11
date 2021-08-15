@@ -83,7 +83,7 @@ Para abrir neovim debes ejecutar un comando sencillo en la terminal, luego ya se
 ``` 
 Luego de ejecutar el comando, te arrojará un error, el cual es este:
 
-![]()
+![](https://pbs.twimg.com/media/E8yrXozXoAEuT8m?format=png&name=900x900)
 
 Para terminar, solo falta intalar el gestor de plugins **vim plug**.
 
@@ -91,14 +91,29 @@ Para terminar, solo falta intalar el gestor de plugins **vim plug**.
 Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga limpia y ligera, ejecuta en la terminal PowerShell el siguiente comando:
 
 ```powershell
-   iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+  ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ``` 
    
 **Falta solo un poco para finalizar esta guía de instalación**.
 
-Así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
+Continuando, añade el comando:
+> :PlugInstall
+
+Así podrás instalar todos los plugins, añado captura de guía.
+
+![](https://pbs.twimg.com/media/E8yrXsvX0AAAO0g?format=png&name=900x900)
+
+Despues, deberás ingresar el comando:
+> :qa
+
+Con el podrás cerrar neovim completamente, para luego iniciar neovim con el mismo comando que antes, te hablo exactamente de este comando: **nvim init.vim**. Y con esto se finaliza la instalación, tu neovim se deberá ver como en las capturas que encontrarás debajo; cabe mencionar que si deseas cambiar el tema o otra cosas puedes busca en Youtube o realizar contacto conmigo vía email, te dejo el correro:
+```powershell
+josue.romero@uniminuto.edu.co
+```
 
 ![](https://pbs.twimg.com/media/E8yYyhvXMAIzjcC?format=png&name=900x900)
 
 ![](https://pbs.twimg.com/media/E8yYykBXEAMvB7f?format=png&name=900x900)
+
+###### ¿ Puedes comentarme que tal te pareció está guía de instalación?
