@@ -1,6 +1,6 @@
-<p align="center"><a href="https://github.com/josueromram/josueromram/blob/ProjectsApacheNetbeans12.4/Perfil%20Circular.png" target="_blank">
-    <img src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/autoload/Logo%20nvim(1).png">
-</a></p>
+<p align="center" width="0">
+   <img align="center" width="900" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/autoload/Logo%20nvim(1).png">
+</p>
 
 # Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 June, 2021.
 
