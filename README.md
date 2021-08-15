@@ -30,25 +30,25 @@ Una vez finalice la instalación ejecutalo como administrador porque se neceseti
 Chocolatey es un gran gestor de paquetes que nos permite instalar programas desde la terminal; si o si debes instalarlo para luego instalar una dependencia de neovim, debes copiar los comandos que te dejo y pegarlos en la terminal recientemente instalada.
 
 Ejecuta este primer comando para conocer el estado de las restricciones de tu máquina:
-   ```sh
+```powershell
    Get-ExecutionPolicy
-   ```  
+```  
 Luego ejecuta este otro comando:
-   ```sh
+```powershell
    Set-ExecutionPolicy AllSigned
-   ``` 
+``` 
 Y por último ejecuta este comando, ya que define la instalación de Chocolatey:
-   ```sh
+```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-   ```
+```
 Añado una captura de pantalla, esto es lo que debe devolver el comando utilizado.
 
 ![](https://pbs.twimg.com/media/E8ZakdaXsAAwiBY?format=png&name=medium)
 
 Ahora copia y pega este comando para instalar neovim en su versión 0.5.0 o la más reciente que haya cuándo la valles a instalar.
-   ```sh
+```powershell
    choco install neovim
-   ``` 
+``` 
 Cuando te salga este mensaje en la terminal: 
 > Do you want to run the script?([Y]es/[A]ll - yes to all/[N]o/[P]rint): 
 
@@ -78,9 +78,9 @@ Debes cambiarle ese por:
 Ahora bien, corta esa carpeta 'nvim' y dirigete a la ruta donde se instlao neovim, en mi caso fue: **C:\Users\Administrador\AppData\Local**, debe ser la misma ruta tuya solo que cambia el nombre de usuario nada más. Una vez estes ubicado en el fichero **Local** revisa si hay una carpeta con el nombre *nvim-data*, si la encuentras quiere decir que has instalado neovim correctamente. Posteriormente, pega la carpeta cortada *nvim* en la carpeta **Local**, esa carpeta contiene toda la personalización, configuración y atajos que yo manejo, para conocer los atajos, abrete y leete el archivo que está dentro de la carpeta **nvim/config/maps.vim**.
 
 Para abrir neovim debes ejecutar un comando sencillo en la terminal, luego ya sea en la pestaña de PowerShell o Simbolo del sistema, debes ubicarte en la ruta donde se está instalado neovim; mi ruta ¡debe ser la misma tuya solo que cambia el nombre de usuario!: **C:\Users\Administrador\AppData\Local\nvim**. Cuando estes ahí debes ingresar el siguiente comando y dar enter:
-   ```sh
+```powershell
    nvim init.vim
-   ``` 
+``` 
 Luego de ejecutar el comando, te arrojará un error, el cual es este:
 
 ![]()
@@ -90,10 +90,10 @@ Para terminar, solo falta intalar el gestor de plugins **vim plug**.
 ### Paso No. 6. Instalar el gestor de plugins VIM PLUG
 Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga limpia y ligera, ejecuta en la terminal PowerShell el siguiente comando:
 
-   ```sh
+```powershell
    iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
-   ``` 
+``` 
    
 **Falta solo un poco para finalizar esta guía de instalación**.
 
