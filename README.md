@@ -112,4 +112,4 @@ josue.romero@uniminuto.edu.co
 
 ![](https://pbs.twimg.com/media/E8yYykBXEAMvB7f?format=png&name=900x900)
 
-###### ¿ Puedes comentarme que tal te pareció está guía de instalación?
+###### ¿Puedes comentarme que tal te pareció esta guía de instalación?
