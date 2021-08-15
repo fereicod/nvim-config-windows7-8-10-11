@@ -81,24 +81,20 @@ Para abrir neovim debes ejecutar un comando sencillo en la terminal, luego ya se
    ```sh
    nvim init.vim
    ``` 
-Y dar enter para abri neovim en la ruta situada, adjunto una captura de pantalla:
+Luego de ejecutar el comando, te arrojará un error, el cual es este:
 
-![](https://pbs.twimg.com/media/E8j_3-fXEAcSFbH?format=png&name=small)
-
-Luego de esto, te arrojará varios errores, como estos:
-
-![](https://pbs.twimg.com/media/E8j_38KX0AMQX5c?format=png&name=900x900)
-
-Para saltar esos errores debes presionar enter hasta que te arroje el código del archivo **init.vim**, te hablo de una pantalla similar a la del capture, para que te ubiques:
-
-![](https://pbs.twimg.com/media/E8j_35NWYAE38Fo?format=png&name=900x900)
+![]()
 
 Para terminar, solo falta intalar el gestor de plugins **vim plug**.
 
 ### Paso No. 6. Instalar el gestor de plugins VIM PLUG
-Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga limpia u ligera; dirigirte a el repositorios oficial, dando un [click aquí](https://github.com/junegunn/vim-plug#windows-powershell-1 "github.com/junegunn/vim-plug"),
+Vim-plug es un administrador de plugins para el editor de texto vim minimalista, de código abierto y gratuito que puede instalar o actualizar complementos en paralelo. Crea clones para minimizar el uso del espacio de disco y el tiempo de descarga; para realizar una descarga limpia y ligera, ejecuta en la terminal PowerShell el siguiente comando:
 
-
+   ```sh
+   iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+   ``` 
+   
 **Falta solo un poco para finalizar esta guía de instalación**.
 
 Así se deberá ver tú neovim, cabe mencionar que si deseas cambiar el tema pues solo busca en Youtube como realizarlo.
