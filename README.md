@@ -1,4 +1,4 @@
-<p align="center"><a href="https://twitter.com/Josueromram/" target="_blank">
+<p align="center"><a href="https://github.com/josueromram/josueromram/blob/ProjectsApacheNetbeans12.4/Perfil%20Circular.png" target="_blank">
     <img src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/autoload/Logo%20nvim(1).png">
 </a></p>
 
