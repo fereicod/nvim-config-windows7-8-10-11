@@ -1,5 +1,5 @@
 <p align="center" width="0">
-   <img align="center" width="900" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo.png">
+   <img align="center" width="700" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo.png">
 </p>
 
 # Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 June, 2021.
