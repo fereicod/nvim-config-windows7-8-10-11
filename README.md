@@ -113,3 +113,8 @@ josue.romero@uniminuto.edu.co
 ![](https://pbs.twimg.com/media/E8yYykBXEAMvB7f?format=png&name=900x900)
 
 ###### ¿Puedes comentarme que tal te pareció esta guía de instalación?
+
+
+<p align="center" width="0">
+   <img align="center" width="280" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo-flat.png">
+</p>
