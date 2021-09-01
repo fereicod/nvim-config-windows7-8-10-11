@@ -116,8 +116,8 @@ josue.romero@uniminuto.edu.co
 
 
 <p align="center" width="0">
-   <img align="center" width="280" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo-flat.png">
+   <img align="center" width="200" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo-flat.png">
 </p>
 <p align="right" width="0">
-   <img align="center" width="100" src="https://github.com/josueromram/josueromram/blob/ProjectsApacheNetbeans12.4/Perfil%20Circular.png">
+   <img align="center" width="50" src="https://github.com/josueromram/josueromram/blob/ProjectsApacheNetbeans12.4/Perfil%20Circular.png">
 </p>
