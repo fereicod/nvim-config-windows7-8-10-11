@@ -1,8 +1,8 @@
+<H1 align="center">Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 June, 2021.</H1>
+
 <p align="center" width="0">
    <img align="center" width="700" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo.png">
 </p>
-
-# Instalación y Configuración de Neovim v0.5.0 para Windows 8, 10 & 11 June, 2021.
 
 ## Introducción.
 En el presente proyecto se describe el proceso a seguir para personalizar e instalar **NEOVIM** en su versión más reciente 0.5.0 2021, proyecto realizado tras la devaluación e ineficiencia de instalaciones que hay sobre neovim en español para el sistema operativo **Windows 8, 10 y 11**, gran parte de los programadores profesionales utilizan este editor de código muy profesional. Asimismo este estudio de elaboración propia revela la calidad de instalación, configuración y personalización. Para una mejor comprensión del presente informe debe enfocarse y descargar cada una de las herramientas inicializadas a continuación:
