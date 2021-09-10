@@ -23,5 +23,19 @@
       "open"
     ],
     "v": "open:vsplit"
+  },
+  {
+    "languageserver": {
+      "go": {
+        "command": "gopls",
+        "rootPatterns": [
+          "go.mod"
+        ],
+        "trace.server": "verbose",
+        "filetypes": [
+          "go"
+        ]
+      }
+    }
   }
 }
