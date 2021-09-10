@@ -4,11 +4,11 @@
 
 <H1 align="center">Guía Completa de Atajos para Mejorar la Productividad en el Editor de Texto NeoVim.</H1>
 
-Cordial saludo, lo que encontrarás en este documento markdown serán comandos que contiene mi configuración de neovim, los siguientes comandos valga la redundancia se pueden usar solamente estando situado en el modo correcto, te explico como entrar a los modos más usados.
+Cordial saludo, lo que encontrarás en este documento markdown serán los comandos que contiene mi configuración, los siguientes comandos valga la redundancia se pueden usar solamente estando situado en el *MODO* correcto, te explico como entrar a los 2 modos más usados.
 
 Al presionar:
 
-- Esc = te permite salir de cualquier modo ya sea **INSERT, V-BLOCK, V,LINE, REPLACE**, entre otros. Llevandonos al modo **NORMAL.**
+- Esc = te permite salir de cualquier modo ya sea que estes en **INSERT, V-BLOCK, V,LINE, REPLACE**, entre otros. Llevandonos al modo inicial que se llama **NORMAL.**
 - i = te permite entrar al modo **INSERT**, donde se puede insertar código al archivo.
 - v = te permite entrar al modo **VISUAL**, donde se puede seleccionar código, copiar, mover, etc.
 
