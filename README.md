@@ -1,7 +1,7 @@
 <H1 align="center">Instalación y Configuración de Neovim v0.5.0 para Windows 8.1, 10 & 11 June, 2021.</H1>
 
 <p align="center" width="0">
-   <img align="center" width="700" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo.png">
+   <img align="center" width="610" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo.png">
 </p>
 
 ## Introducción.
@@ -22,7 +22,9 @@ En el presente proyecto se describe el proceso a seguir para personalizar e inst
 ### Paso No. 1. Instalar Windows Terminal.
 Amiga o amigo para realizar la instalación primero abre Microsft Store o Tienda de Windows; una vez se inicie debes escribir en la barra de busqueda lo siguiente: **terminal**, luego de esto, debes seleccionar el programa que se encuentra en la siguiente captura de pantalla, lo más seguro es que el programa te aparezca de primero como me sucedió.
 
-![Windows Terminal](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/win-terminal.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/win-terminal.png">
+</p>
 
 Una vez finalice la instalación ejecutala como administrador porque deberás ejecutar una serie de comandos, el motivo por el cual recomiendo su instalación es para que neovim tenga una apariencia intuitiva y elegante, tambien podrían usar la ***cmd o simbolo del sistema***, pero lo malo es que con esa terminal neovim nunca se verá igual a como en la terminal nueva, si quieres pruebalo, yo utilizo las dos terminales.
 
@@ -43,7 +45,9 @@ Y por último añade este comando, ya que contiene la instalación de **Chocolat
 ```
 Añado una captura de pantalla, a mi me arroja estos errores porque ya lo tengo instalado correctamente, tu solo debes seguir los protocolos que te indíco.
 
-![Instalación de Chocolatey](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/chocolatey.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/chocolatey.png">
+</p>
 
 Ahora copia y pega este otro comando para instalar neovim en su versión 0.5.0 o la más reciente que haya a la fecha de tu instalación.
 ```powershell
@@ -65,7 +69,9 @@ Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nod
 ### Paso No. 5. Descarga los archivos de este repositorio.
 Esta es la personalización que actualmente tengo en neovim:
 
-![Neovim Josué Romero](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/nvim-completo.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/nvim-completo.png">
+</p>
 
 **¿Te gustaría tener neovim como lo tengo yo?.** Si tu respuesta es **SÍ** deberás descargarte los archivos publicados en este repositorio ya que son necesarios para que tu Neovim tenga una buena interfaz y las mismas funcionalidades que manejo, atajos y plugins. Una vez se haya descargado debes extraer el .zip. Luego, a la carpeta generada debes cambiarle el nombre por:
 
@@ -81,11 +87,15 @@ Para abrir neovim debes ejecutar un comando sencillo en la terminal PowerShell o
 
 Añado captura de pantalla:
 
-![nvim init.vim](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/init-vim.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/init-vim.png">
+</p>
 
 Luego de ejecutar el comando, te arrojará muchos errores que son normales la primera vez, aparecen porque los plugins no se han instalado, deben ser estos mismos errores:
 
-![Errores normales](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/errores-normales.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/errores-normales.png">
+</p>
 
 Para saltar esos errores debes presionar 22 veces la tecla enter y, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el paso 5.
 
@@ -103,11 +113,16 @@ Continuando, escribe el comando, recuerda que debes estar en modo **NORMAL:**
 > :PlugInstall
 
 Anado captura de pantalla:
-![:PlugInstall](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/pluginstall.png)
+
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/pluginstall.png">
+</p>
 
 Así podrás instalar todos los plugins que manejo a diario, añado captura de guía.
 
-![Complementos instalados](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/plugins-instalados.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/plugins-instalados.png">
+</p>
 
 Despues de que hayan terminado todas las descargas y quieras conocer los cambios efectuados, presiona las teclas espacio + x en modo **NORMAL:**
 > space + x
@@ -118,9 +133,13 @@ El comando cerrará neovim completamente. Para que luego, abras de nuevo neovim.
 josueromram@outlook.es
 ```
 
-![init.vim](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/nvim-init-vim.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/nvim-init-vim.png">
+</p>
 
-![Sintaxi con ligaduras](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/nvim-nerdtree_java.png)
+<p align="center" width="0">
+   <img align="center" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/nvim-nerdtree_java.png">
+</p>
 
 ###### ¿Puedes comentarme que tal te pareció esta guía de instalación?
 
