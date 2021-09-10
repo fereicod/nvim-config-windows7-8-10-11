@@ -69,3 +69,5 @@ Ahora los comandos que mencionaré podrán efectuar su tarea siempre y cuándo e
 
 - gd = lleva el cursor a la definición o creación del método o atributo.
 - gf = nos abre la definición del método o clase en su archivo origen.
+
+Aúm me faltan más comandos por añadir, cuando tenga tiempo terminaré este documento, gracias.
