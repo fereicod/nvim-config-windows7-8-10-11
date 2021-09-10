@@ -50,7 +50,7 @@ Añado una captura de pantalla, a mi me arroja estos errores porque ya lo tengo 
 </p>
 
 Ahora copia y pega este otro comando para instalar neovim en su versión 0.5.0 o la más reciente que haya a la fecha de tu instalación.
-```powershell
+```choco
    choco install neovim
 ``` 
 Cuando te salga este mensaje en la terminal: 
@@ -81,7 +81,7 @@ Ahora bien, corta esa carpeta *nvim* y dirigete a la ruta donde se instlao neovi
 
 Para abrir neovim debes ejecutar un comando sencillo en la terminal PowerShell o Simbolo del sistema, debes ubicarte en la ruta donde está instalado neovim. La ruta es ¡la misma tuya mía solo que cambia el nombre de usuario y debes entrar a carpeta nvim! **C:\Users\Administrador\AppData\Local\nvim**. Cuando estes ahí debes ingresar el siguiente comando y presionar enter:
 
-```powershell
+```vim
    nvim init.vim
 ``` 
 
@@ -127,9 +127,9 @@ Así podrás instalar todos los plugins que manejo a diario, añado captura de g
 Despues de que hayan terminado todas las descargas y quieras conocer los cambios efectuados, presiona las teclas espacio + x en modo **NORMAL:**
 > space + x
 
-El comando cerrará neovim completamente. Para que luego, abras de nuevo neovim. ¡si no recuerdas como abrirlo! debes ingresar el siguiente comandos en la misma ruta: **nvim init.vim**. En terminos generales, veráz el cambio en neovim justo como en las imagenes; cabe mencionar que si deseas cambiar el tema o otra cosas puedes buscar en Youtube o realizar contacto vía e-mail conmigo, comparto mi correo:
+El comando cerrará neovim completamente. Para que luego, abras neovim nuevamente. ¡si no recuerdas como abrirlo! debes ingresar el siguiente comando en la misma ruta: **nvim init.vim**. En terminos generales, veráz el cambio justo como en las imagenes que proporcioné; cabe mencionar que si deseas cambiar el tema o otra cosas puedes buscar en Youtube o realizar contacto vía email conmigo, correo:
 
-```powershell
+```correo
 josueromram@outlook.es
 ```
 
