@@ -48,7 +48,7 @@ Los comandos que mencionaré solo funcionarán si te situas en el modo **NORMAL.
 
 - / + palabra = sirve para buscar palabras en el archivo situado por ejemplo: si presionas / y escribes edad y das un enter, se buscará la palabra edad en todo el documento y sí hay coincidencias las resaltará con colores diferentes. Posteriormente, podrás despazarte de palabra en palabra presionando la letra n, hacia delante y con N hacia detras.
 
-- :%s/palabra-a-reemplazar/nuevo-reemplazo/gc = permite reemplaza la palabra o las palabras que esten en el archivo, si realizas esto :%s/sopa/arroz/gc, este hará que la palabra arroz se cambie por la palabra sopa.
+- :%s/palabras-a-reemplazar/nueva-palabras/gc = permite reemplazar la palabra o las palabras que hayan en el archivo, si realizas esto :%s/sopa/arroz/gc, este hará que la palabra arroz se situe donde estaba la palabra sopa.
 
 - s = para que funcione debes abrir la NERTreeToggle o Árbol Lateral. Luego, ubica el cursor en el archivo que deseas abrir, al presionar (s), abrirá el archivo que quedará ocupará la mitad de la pantalla horizontalmente.
 
