@@ -78,14 +78,16 @@ Para abrir neovim debes ejecutar un comando sencillo en la terminal PowerShell o
 ```powershell
    nvim init.vim
 ``` 
+
 Añado captura de pantalla:
+
 ![nvim init.vim](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/init-vim.png)
 
-Luego de ejecutar el comando, te arrojará muchos error que son normales la primera vez, ellos aparecen porque no tienes los plugins instalados, deben ser estos errores:
+Luego de ejecutar el comando, te arrojará muchos errores que son normales la primera vez, aparecen porque los plugins no se han instalado, deben ser estos mismos errores:
 
 ![Errores normales](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/errores-normales.png)
 
-Para saltar esos error debes presionar 22 veces la tecla enter, y nada más faltaría intalar el gestor de plugins **vim plug** para que culmines con tu editor de texto.
+Para saltar esos errores debes presionar 22 veces la tecla enter y, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el paso 5.
 
 ### Paso No. 6. Instalar el gestor de plugins VIM PLUG
 **Vim plug** es un administrador de plugins para el editor de texto vim y neovim minimalista, de código abierto creado por **junegunn** y gratuito que puede instalar y actualizar complementos en paralelo. Crea clones para minimizar el uso de espacio del disco y el tiempo de descarga; para realizar una descarga limpia y ligera, ejecuta en la terminal nueva, en la pestaña PowerShell ejecutada como administrador el siguiente comando:
