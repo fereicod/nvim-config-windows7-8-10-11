@@ -2,15 +2,16 @@
    <img align="center" width="700" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/neovim-logo-1color.png">
 </p>
 
-<H1 align="center">Guía completa de atajos para mejorar la productividad en NeoVim.</H1>
+<H1 align="center">Guía Completa de Atajos para Mejorar la Productividad en el Editor de Texto NeoVim.</H1>
 
-Lo que leerás serán todos los comandos que contiene mi configuración de nvim, los siguientes comandos se pueden usar solamente presionando la tecla que indíco en modo **NORMAL.**
+Cordial saludo, o que encontrarás en os comandos que contiene mi configuración de nvim, los siguientes comandos se pueden usar solamente presionando la tecla que indíco en modo **NORMAL.**
 
-Esc = nos permite salir de cualquier modo ya sea INSERT, V-BLOCK, V,LINE, REPLACE, entre otros. Llevandonos al modo NORMAL.
-i = permite entrar al modo INSERT, donde se puede insertar código al archivo.
-v = permite entrar al modo VISUAL, donde se puede seleccionar código, copiar, mover, etc.
+Esc = nos permite salir de cualquier modo ya sea **INSERT, V-BLOCK, V,LINE, REPLACE**, entre otros. Llevandonos al modo **NORMAL.**
+i = permite entrar al modo **INSERT**, donde se puede insertar código al archivo.
+v = permite entrar al modo **VISUAL**, donde se puede seleccionar código, copiar, mover, etc.
 
 ## EN MODO NORMAL
+Los comandos que mencionaré solo funcionarán situado en el modo **NORMAL.** 
 
 gg = situa el cursor al inicio del archivo.
 G = situa el cursor al final del archivo.
@@ -52,17 +53,17 @@ s = para que funcione debes abrir la NERTreeToggle o Árbol Lateral. Luego, ubic
 Podrás cortar varías líneas con la cantidad de líneas que hayan debajo del cursor más dos veces la tecla d, por ejemplo, si presionar en modo normal: 6dd cortará las 6 líneas debajo de donde este el cursor, hablo de cortar porque no existe el comando para eliminar, ese comando guarde lo cortado en el clipboard ya que si presionas p despues de eso veraz que pegará el contenido.
 
 ## EN MODO VISUAL, V-LINE y V_BLOCK
+Los comandos que mencionaré solo funcionarán situado en el modo **VISUAL.**
 
 y = permite copiar el código seleccionado.
 c = permite cortar lo que tengas seleccionado.
 
-
 ## OTROS ATAJOS MÁS COMPLETOS
-Todos los comandos que mencionaré podrán efectuar su tarea siempre y cuándo presiones la tecla <Leader> antes de las letras, la tecla líder es: espacio.
+Ahora los comandos que mencionaré podrán efectuar su tarea siempre y cuándo estes en el modo **NORMAL** y presiones la tecla *Leader* antes de la o las letras de acceso, la tecla líder es: espacio.
 
-espacio+w = guarda los cambios del archivo.
-espacio+q = no guarda lo cambios y sale de nvim.
-espacio+x = sale directamente de nvim.
+w = guarda los cambios del archivo.
+q = no guarda lo cambios y sale de nvim.
+x = sale directamente de nvim.
 
 gd = lleva el cursor a la definición o creación del método o atributo.
 gf = nos abre la definición del método o clase en su archivo origen.
