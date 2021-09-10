@@ -41,9 +41,9 @@ Y por último añade este comando, ya que contiene la instalación de **Chocolat
 ```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
-Añado una captura de pantalla, esto es lo que debe devolver el comando utilizado.
+Añado una captura de pantalla, a mi me arroja estos errores porque ya lo tengo instalado correctamente, tu solo debes seguir los protocolos que te indíco.
 
-![](https://pbs.twimg.com/media/E8ZakdaXsAAwiBY?format=png&name=medium)
+![Instalación de Chocolatey](https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/chocolatey.png)
 
 Ahora copia y pega este otro comando para instalar neovim en su versión 0.5.0 o la más reciente que haya a la fecha de tu instalación.
 ```powershell
