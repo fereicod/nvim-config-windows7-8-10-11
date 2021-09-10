@@ -1,13 +1,3 @@
-" Configurarión del Tema
-colorscheme gruvbox
-let g:gruvbox_contrast_dark="hard"
-let g:gruvbox_enable_italic=2
-let g:gruvbox_hide_endofbuffer=2
-highlight Comment cterm=italic
-highlight Normal ctermbg=NONE
-highlight ColoColumn ctermbg=0 guibg=lightgrey
-highlight link JavaIdentifier NONE
-
 " resaltado de sintaxis para atributos y métodos
 let g:polyglot_disable=['javascript', 'typescript', 'java', 'python']
 
@@ -51,8 +41,5 @@ let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 
-" configuración de vimtones
-"let g:vimtonesTurnOn=1
-"let g:vimtonesPlaySound=1
-"let g:vimtonesChangeVol=1
-"let g:lastinputTime = str2float(reltimestr(reltime()))
+" con space+cl => comentamos líneas.
+lua require('nvim_comment').setup({line_mapping = "<leader>cl", operator_mapping = "<leader>c"})
