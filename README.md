@@ -33,15 +33,15 @@ Chocolatey es un gran gestor de paquetes que nos permite instalar programas desd
 
 Ejecuta este primer comando para conocer el estado de las restricciones de tu computador:
 ```powershell
-   Get-ExecutionPolicy
+Get-ExecutionPolicy
 ```  
 Luego ejecuta este otro comando, para deshabilitar las restricciones y no se presenten fallos:
 ```powershell
-   Set-ExecutionPolicy AllSigned
+Set-ExecutionPolicy AllSigned
 ``` 
 Y por último añade este comando, ya que contiene la instalación de **Chocolatey**:
 ```powershell
-   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 Añado una captura de pantalla, a mi me arroja estos errores porque ya lo tengo instalado correctamente, tu solo debes seguir los protocolos que te indíco.
 
@@ -51,7 +51,7 @@ Añado una captura de pantalla, a mi me arroja estos errores porque ya lo tengo 
 
 Ahora copia y pega este otro comando para instalar neovim en su versión 0.5.0 o la más reciente que haya a la fecha de tu instalación.
 ```choco
-   choco install neovim
+choco install neovim
 ``` 
 Cuando te salga este mensaje en la terminal: 
 > Do you want to run the script?([Y]es/[A]ll - yes to all/[N]o/[P]rint): 
@@ -82,7 +82,7 @@ Ahora bien, corta esa carpeta *nvim* y dirigete a la ruta donde se instlao neovi
 Para abrir neovim debes ejecutar un comando sencillo en la terminal PowerShell o Simbolo del sistema, debes ubicarte en la ruta donde está instalado neovim. La ruta es ¡la misma tuya mía solo que cambia el nombre de usuario y debes entrar a carpeta nvim! **C:\Users\Administrador\AppData\Local\nvim**. Cuando estes ahí debes ingresar el siguiente comando y presionar enter:
 
 ```vim
-   nvim init.vim
+nvim init.vim
 ``` 
 
 Añado captura de pantalla:
