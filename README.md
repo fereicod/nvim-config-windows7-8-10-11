@@ -1,7 +1,7 @@
 <H1 align="center">Instalación y Configuración de Neovim v0.5.0 para Windows 8.1, 10 & 11 June, 2021.</H1>
 
 <p align="center" width="0">
-   <img align="center" width="610" src="https://github.com/josueromram/nvim-config-windows10/blob/nvim/projects/neovim-logo.png">
+   <img align="center" width="610" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/neovim-logo-shadow.png">
 </p>
 
 ## Introducción.
