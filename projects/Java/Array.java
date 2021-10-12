@@ -13,22 +13,22 @@ public class Array {
 
 		/* El usuario llena el array */
 		for (int k = 0; k < arr.length; k++) {
-			System.out.print("Array[" + k + "]: ");
+			System.out.print("Array[" + (k+1) + "]: ");
 			arr[k] = sc.nextInt();
 		}
 	  /* Ordeno el array con el método Arrays.sort(arr) */
 		Arrays.sort(arr);
-		System.out.println("\nArray = " + Arrays.toString(arr));
+		System.out.println("\nArray Ordenado = " + Arrays.toString(arr));
 
 		// Imprimo el array con el método stream(arr).forEach(System.out::println)
 		// Arrays.stream(arr).forEach(System.out::print);
 
 		// Imprimo el array con el método Arrays.asList
 		Integer arch[] = {4, 9, 31, 45, 1};
-		System.out.println("Array = " + Arrays.asList(arch));
+		System.out.println("Array Distinto = " + Arrays.asList(arch));
 
 		String[][] strArray = new String[][] {{"Josue", "Mary"}, {"Andri", "Bob Esponja"}};
-		System.out.println("\n" + Arrays.deepToString(strArray));
+		System.out.println("Otra clase de Array = " + Arrays.deepToString(strArray));
 	}
 
 	public static void main(String[] args) {
@@ -43,6 +43,5 @@ public class Array {
     Use el método stream().forEach() para imprimir un array en Java
     Usar el método asList() para imprimir el array multidimensional en Java
     Use el método deepToString() para imprimir un array multidimensional en Java
-	*/ 
+	*/
 }
-

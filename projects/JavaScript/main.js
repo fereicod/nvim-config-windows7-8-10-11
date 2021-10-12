@@ -6,7 +6,7 @@
 
 // Se crea un Array <String>
 let frutas = ["Manzana", "Banana", "Patilla"]
-console.log("Tamaño del Arrays =", frutas.length)// 2
+console.log("Tamaño del Arrays =", frutas.length)// 3
 
 // Acceder a un elemento de Array mediante su índice
 let primero = frutas[0] // Manzana
