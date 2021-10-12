@@ -1,6 +1,6 @@
-call plug#begin('~/.config/.vim')
+call plug#begin('~/AppData/Local/nvim/vim-plug/')
 
-" tema
+" temas
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 
@@ -10,30 +10,29 @@ Plug 'itchyny/lightline.vim'
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
 
 " barra lateral o árbol
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
-" complementos
-Plug 'easymotion/vim-easymotion'
+" otros complementos
 Plug 'terrortylor/nvim-comment'
+Plug 'easymotion/vim-easymotion'
 
-" navegación rápida entre búfer
+" navegación rápida entre tabs o pestañas
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 
 " autocompletado
-Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 
 " IDE
-Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'yggdroot/indentline'
-Plug 'junegunn/fzf'
-Plug 'ianks/vim-tsx'
+Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
+Plug 'ianks/vim-tsx'
 
 call plug#end()
