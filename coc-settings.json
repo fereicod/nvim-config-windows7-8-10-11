@@ -1,40 +1,106 @@
 {
+  "snippets.ultisnips.usePythonx": false,
+  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/snips/",
+  "yaml.format.enable": true,
+  "yaml.format.singleQuote": true,
+  "yaml.schemas": {
+    "kubernetes": "/*.yaml"
+  },
   "coc.preferences.formatOnSaveFiletypes": [
+		"html",
     "css",
-    "html",
-    "markdown",
-    "python",
+    "markdow",
     "javascript",
-    "typescript",
-    "jsonc",
-    "vim",
-    "md",
-    "txt",
     "json",
-    "sql"
+		"python",
+    "java",
+		"typescript"
   ],
   "explorer.width": 30,
+  "explorer.file.reveal.auto": true,
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
+  "explorer.icon.source": "vim-devicons",
+  "explorer.file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
+  "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
+  "explorer.file.root.template": "[icon & 1] [root]",
   "explorer.keyMappings.global": {
-    "<cr>": [
-      "expandable?",
-      "expand",
-      "open"
-    ],
     "v": "open:vsplit"
   },
-  {
-    "languageserver": {
-      "go": {
-        "command": "gopls",
-        "rootPatterns": [
-          "go.mod"
-        ],
-        "trace.server": "verbose",
-        "filetypes": [
-          "go"
-        ]
+
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  }
+
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.source.around.firstMatch": false,
+  "coc.source.file.ignoreHidden": false,
+  "diagnostic-languageserver.debug": true,
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.format": "%message",
+  "diagnostic.virtualText": false,
+  "diagnostic.checkCurrentLine": true,
+
+  "signature.target": "echo",
+  "suggest.timeout": 5000,
+  "suggest.asciiCharactersOnly": true,
+
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    },
+    "vimls": {
+      "module": "/usr/lib/node_modules/vim-language-server/bin/index.js",
+      "args": ["--node-ipc"],
+      "initializationOptions": {
+        "isNeovim": true,
+        "iskeyword": "@,48-57,_,192-255,-#",
+        "vimruntime": "",
+        "runtimepath": "",
+        "diagnostic": {
+          "enable": true
+        },
+        "indexes": {
+          "runtimepath": true,
+          "gap": 100,
+          "count": 3,
+          "projectRootPatterns": [
+            "strange-root-pattern",
+            ".git",
+            "autoload",
+            "plugin"
+          ]
+        },
+        "suggest": {
+          "fromVimruntime": true,
+          "fromRuntimepath": false
+        }
+      },
+      "filetypes": ["vim"]
+    },
+    "ccls": {
+      "command": "ccls",
+      "trace.server": "verbose",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg"
+      ],
+      "initializationOptions": {
+        "cache": { "directory": "/tmp/ccls" },
+        "client": { "snippetSupport": true }
       }
     }
   }

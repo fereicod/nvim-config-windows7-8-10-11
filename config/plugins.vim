@@ -1,19 +1,20 @@
 call plug#begin('~/AppData/Local/nvim/vim-plug/')
 
-" temas
+" resaltado de sintaxis
+Plug 'sheerun/vim-polyglot'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" tema
 Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 
 " barra de estado
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
-" resaltado de sintaxis
-Plug 'sheerun/vim-polyglot'
-
 " barra lateral o árbol
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " otros complementos
 Plug 'terrortylor/nvim-comment'
@@ -21,18 +22,17 @@ Plug 'easymotion/vim-easymotion'
 
 " navegación rápida entre tabs o pestañas
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'benmills/vimux'
 
 " autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'
 Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
-Plug 'ianks/vim-tsx'
 
 call plug#end()
