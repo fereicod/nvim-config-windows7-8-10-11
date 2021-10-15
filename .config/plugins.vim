@@ -2,7 +2,6 @@ call plug#begin('~/AppData/Local/nvim/.vim-plug/')
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " tema
 Plug 'morhetz/gruvbox'
@@ -17,7 +16,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter'
 
 " otros complementos
-Plug 'terrortylor/nvim-comment'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
@@ -26,15 +24,19 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 
-" IDE
+" Telescope
 Plug 'nvim-lua/popup'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
+" IDE
 Plug 'terryma/vim-multiple-cursors'
+Plug 'jiangmiao/auto-pairs'
 Plug 'yggdroot/indentline'
+Plug 'terrortylor/nvim-comment'
 
 call plug#end()
