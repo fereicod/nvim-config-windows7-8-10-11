@@ -1,5 +1,5 @@
-" resaltado de sintaxis para atributos y métodos
-let g:polyglot_disable=['typescript', 'javascript', 'css', 'html', 'txt', 'markdown']
+" desabilito el resaltado de sintaxis para esos lenguajes
+"let g:polyglot_disable=['typescript', 'javascript', 'css', 'html', 'txt', 'markdown']
 
 " configuración de la barra de estado Lightlane
 let g:lightline = {
