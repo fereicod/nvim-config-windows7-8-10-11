@@ -13,7 +13,6 @@
 so ~/AppData/Local/nvim/.config/plugins-config.vim
 so ~/AppData/Local/nvim/.config/plugins.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
-so ~/AppData/Local/nvim/.config/coc-config.vim
 
 syntax enable
 set number
