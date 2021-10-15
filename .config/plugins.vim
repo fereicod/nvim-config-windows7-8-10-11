@@ -7,7 +7,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " tema
 Plug 'morhetz/gruvbox'
 
-" barra de estado
+" barra de estado especial para gruvbox
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
@@ -19,6 +19,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 " otros complementos
 Plug 'terrortylor/nvim-comment'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
 
 " navegación rápida entre tabs o pestañas
 Plug 'christoomey/vim-tmux-navigator'
@@ -30,9 +31,10 @@ Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 
 " IDE
+Plug 'nvim-lua/popup'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'yggdroot/indentline'
-Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
-Plug 'junegunn/fzf.vim'
 
 call plug#end()
