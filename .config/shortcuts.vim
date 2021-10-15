@@ -29,8 +29,13 @@ nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
-" abrir mecanismo de navegación rápida
-map <Leader>p :Files<CR>
+" encuentra archivos usando el azúcar de línea de comandos Telescope.
+nnoremap <Leader>f <cmd>Telescope find_files<CR>
+nnoremap <Leader>fl <cmd>Telescope live_grep<CR>
+nnoremap <Leader>fb <cmd>Telescope buffers<CR>
+nnoremap <Leader>fh <cmd>Telescope help_tags<CR>
+nnoremap <Leader>fg <cmd>Telescope git_status<CR>
+nnoremap <Leader>fc <cmd>Telescope command_history<CR>
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><Leader><C-h> :TmuxNavigateLeft<CR>
