@@ -1,12 +1,16 @@
 let mapleader = " "
 
+" salir del modo INSERT con Esc, jk o ctrl+c 
+imap jk <Esc>
+imap <C-c> <Esc>l
+
 " desplazamiento rápido con ctr+e y ctrl+y
 nnoremap <C-k> 10 <C-e>
 nnoremap <C-j> 10 <C-y>
 
 " ajustar tamaño de los búfer o pestañas divididas
-nnoremap <Leader>< 25 <C-w><
-nnoremap <Leader>> 25 <C-w>>
+nnoremap <F6> 25 <C-w><
+nnoremap <F7> 25 <C-w>>
 
 " coloca un punto y coma al final de línea situada
 nnoremap <Leader>; $a;<Esc>
@@ -49,15 +53,13 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" salir del modo INSERT con Esc, jk o ctrl+c 
-imap jk <Esc>
-imap <C-c> <Esc>l
-
 " dividir pantalla en dos [horizontal] con space+hh
 nnoremap <Leader>hh :sp<CR>
 " dividir pantalla en dos [vertical] con space+vv
 nnoremap <Leader>vv :vsp<CR>
 
+" eliminar todos los espacios vacíos que hayan en el archivo
+nnoremap <F3> :%s#\s\+$##<CR>
 " crea un nuevo archivo en la ruta posicionada
 nnoremap <F4> :tabnew 
 
@@ -95,7 +97,7 @@ nnoremap m :m .+1<CR>==
 xmap s <Plug>VSurround
 
 " realizar diagnóstico
-nnoremap <líder> P: let @ * = expand ("%") <CR>
+nnoremap <Leader> P: let @ * = expand ("%") <CR>
 
 " Para camiar el caráctere que tenga una cadena de texto o cambiar el carácter que
 " los contiene, por ejemplo: si tienes un 'Hello Python' al presionar cs+el-simbol, la cadena de caracteres
@@ -114,9 +116,6 @@ xmap <silent><C-s> <Plug>(coc-range-select)
 
 " copiar ruta general del archivo posicionado
 nnoremap <Leader>kp :let @*=expand("%")<CR>
-
-" utilice <F2> para mostrar la documentación de vista previa
-nnoremap <silent><F2> :call <SID>show_documentation()<CR>
 
 " con space+cl, comentamos la línea en la que se encuentre el cursor en modo NORMAL
 lua require('nvim_comment').setup({line_mapping = "<leader>cl", operator_mapping = "<leader>c"})
