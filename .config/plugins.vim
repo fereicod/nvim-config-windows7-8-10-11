@@ -22,24 +22,13 @@ Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
 
 " autocompletado
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim'
 
 " complemento telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
-
-" test
-"Plug 'tyewang/vimux-jest-test'
-"Plug 'janko-m/vim-test'
-
-" git
-"Plug 'tpope/vim-fugitive'
-"Plug 'tpope/vim-repeat'
-"Plug 'mhinz/vim-signify'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'

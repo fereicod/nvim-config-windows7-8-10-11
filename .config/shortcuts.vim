@@ -102,12 +102,24 @@ nnoremap <Leader> P: let @ * = expand ("%") <CR>
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
 "*----------------------- ATAJOS PARA ALGUNAS FUNCIONALIDADES DE COC -----------------------*
-
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" utilice <C-l> para expandir el fragmento de activación.
+imap <C-l> <Plug>(coc-snippets-expand)
+" utilice <C-j> tanto para expandir como para saltar (haga que la expansión sea de mayor prioridad).
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+" utilice <C-j> para seleccionar texto para el marcador de posición visual del fragmento.
+vmap <C-j> <Plug>(coc-snippets-select)
+" utilice space+x para convertir el código visual seleccionado en un fragmento
+xmap <leader>x  <Plug>(coc-convert-snippet)
+" use <TAB> para saltar al siguiente marcador de posición
+let g:coc_snippet_next = '<TAB>'
+" use <SHIFT-TAB> para saltar al marcador de posición anterior
+let g:coc_snippet_prev = '<S-TAB>'
 
 " Para gatillar el autocompletado de COC presione ctrl+space, aunque automaticamente se gatilla.
 " if &filetype == 'javascript' || &filetype == 'java'
@@ -152,17 +164,3 @@ endif
 nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
 " conocer y administrar snippets
 nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
-
-" haga que <CR> seleccione automáticamente el primer elemento de finalización y notifique a coc.nvim
-" al ingresar, <cr> podría reasignarse mediante otro complemento de vim
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" use la pestaña para completar el disparador con los caracteres adelante y navegue.
-" NOTA: Utilice el comando ': verbose imap <tab>' para asegurarse de que la pestaña no esté asignada por
-" otro complemento antes de poner esto en su configuración.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"

@@ -29,11 +29,11 @@ let g:lightline = {
 " si utilizas el autocompletado KITE descomenta la linea 30
 "let g:kite_supported_languages = ['nombre-de-los-lenguajes']
 let g:coc_global_extensions = [
-    \ 'coc-tsserver'
+    \ 'coc-tsserver',
+    \ 'coc-snippets'
     \ ]
 " si requieres obtener otras extensiones de autocompletado visita el
 " repositorio en github: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions 
-let g:loaded_python3_provider=0
 
 " cerrar automaticamente la barra lateral o árbol
 let NERDTreeShowHidden=1
@@ -44,13 +44,13 @@ let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 
-" configuración para UltiSnips si llegas a instalarlo. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<C-<>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+" configuración para UltiSnips. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
+"let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsJumpForwardTrigger="<C-b"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsListSnippets="<C-<>"
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
@@ -124,6 +124,12 @@ else
   set signcolumn=yes
 endif
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -138,9 +144,6 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-
-" resalte el símbolo y sus referencias cuando mantenga presionado el cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 augroup mygroup
   autocmd!
