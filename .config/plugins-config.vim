@@ -124,29 +124,10 @@ else
   set signcolumn=yes
 endif
 
-" use la pestaña para completar el disparador con los caracteres adelante y navegue.
-" NOTA: Utilice el comando ': verbose imap <tab>' para asegurarse de que la pestaña no esté asignada por
-" otro complemento antes de poner esto en su configuración.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" haga que <CR> seleccione automáticamente el primer elemento de finalización y notifique a coc.nvim
-" al ingresar, <cr> podría reasignarse mediante otro complemento de vim
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" utilice` [g` y `] g` para navegar por los diagnósticos
-" utilice`: Coco Diagnostics` para obtener todos los diagnósticos del búfer actual en la lista de ubicaciones.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -169,42 +150,12 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" aplicar AutoFix al problema en la línea actual.
-nmap <Leader>qf  <Plug>(coc-fix-current)
-
-" asignar función y objetos de texto de clase
-" NOTA: Requiere compatibilidad con 'textDocument.documentSymbol' del servidor de idiomas.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-
-" vuelva a asignar <C-f> y <C-b> para las ventanas / ventanas emergentes flotantes de desplazamiento.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <slent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
-
 "Agregar comando`: Format` para formatear el búfer actual.
 command! -nargs=0 Format :call CocAction('format')
 "Agregar`: comando Doblar` para doblar el búfer actual.
 command! -nargs=? Fold :call CocAction('fold', <f-args>)
 "Agregar comando`: OR` para organizar las importaciones del búfer actual.
 command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImport')
-
-" acceso rápido a las funcionalidades de CoCList
-" Administrar extensiones o conocer extensiones instaladas.
-nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
-" conocer y administrar snippets.
-nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
 
 " Explorer
 let g:coc_explorer_global_presets = {

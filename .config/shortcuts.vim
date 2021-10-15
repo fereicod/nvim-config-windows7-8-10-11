@@ -41,17 +41,13 @@ nnoremap <silent><Leader><C-j> :TmuxNavigateDown<CR>
 nnoremap <silent><Leader><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><Leader><C-l> :TmuxNavigateRight<CR>
 
-" flujo instantaneo con COC
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
 " dividir pantalla en dos [horizontal] con space+hh
 nnoremap <Leader>hh :sp<CR>
 " dividir pantalla en dos [vertical] con space+vv
 nnoremap <Leader>vv :vsp<CR>
 
+" utilice <F2> para mostrar la documentación en la ventana de vista previa.
+nnoremap <F2> :call <SID>show_documentation()<CR>
 " eliminar todos los espacios vacíos que hayan en el archivo
 nnoremap <F3> :%s#\s\+$##<CR>
 " crea un nuevo archivo en la ruta posicionada
@@ -59,8 +55,8 @@ nnoremap <F4> :tabnew
 " actualiza configuración de neovim
 nmap <F5> :source ~/AppData/Local/nvim/init.vim<CR>
 " ajustar tamaño del búfer o pestaña dividida
-nnoremap <F6> 25 <C-w><
-nnoremap <F7> 25 <C-w>>
+nnoremap <F6> 30 <C-w><
+nnoremap <F7> 30 <C-w>>
 
 " navegación entre tabs o pestañas abiertas
 nnoremap <silent><S-TAB> :bprevious<CR>
@@ -102,6 +98,17 @@ nnoremap <Leader> P: let @ * = expand ("%") <CR>
 " los contiene, por ejemplo: si tienes un 'Hello Python' al presionar cs+el-simbol, la cadena de caracteres
 " magicamente se cambiarán sin necesidad de entrar en el modo INSERT.
 
+" copiar ruta general del archivo posicionado
+nnoremap <Leader>kp :let @*=expand("%")<CR>
+
+"*----------------------- ATAJOS PARA ALGUNAS FUNCIONALIDADES DE COC -----------------------*
+
+" flujo instantaneo con COC
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Para gatillar el autocompletado de COC presione ctrl+space, aunque automaticamente se gatilla.
 " if &filetype == 'javascript' || &filetype == 'java'
   " inoremap <silent><expr> <c-space> coc#refresh()
@@ -113,8 +120,49 @@ nnoremap <Leader> P: let @ * = expand ("%") <CR>
 nmap <silent><C-s> <Plug>(coc-range-select)
 xmap <silent><C-s> <Plug>(coc-range-select)
 
-" copiar ruta general del archivo posicionado
-nnoremap <Leader>kp :let @*=expand("%")<CR>
-
 " con space+cl, comentamos la línea en la que se encuentre el cursor en modo NORMAL
 lua require('nvim_comment').setup({line_mapping = "<leader>cl", operator_mapping = "<leader>c"})
+
+" aplicar AutoFix al problema en la línea actual.
+nmap <Leader>qf  <Plug>(coc-fix-current)
+
+" asignar función y objetos de texto de clase
+" NOTA: Requiere compatibilidad con 'textDocument.documentSymbol' del servidor de idiomas.
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
+" vuelva a asignar <C-f> y <C-b> para las ventanas / ventanas emergentes flotantes de desplazamiento.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+
+" acceso rápido a las funcionalidades de CoCList
+" administrar extensiones
+nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
+" conocer y administrar snippets
+nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
+
+" haga que <CR> seleccione automáticamente el primer elemento de finalización y notifique a coc.nvim
+" al ingresar, <cr> podría reasignarse mediante otro complemento de vim
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" use la pestaña para completar el disparador con los caracteres adelante y navegue.
+" NOTA: Utilice el comando ': verbose imap <tab>' para asegurarse de que la pestaña no esté asignada por
+" otro complemento antes de poner esto en su configuración.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
