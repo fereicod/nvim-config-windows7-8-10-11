@@ -102,23 +102,11 @@ command! -nargs=? Fold :call CocAction('fold', <f-args>)
 "Agregar comando`: OR` para organizar las importaciones del búfer actual.
 command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImport')
 
-"Asignaciones para CoCList
-"Mostrar todos los diagnósticos.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-"Administrar extensiones.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-"Mostrar comandos.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-"Buscar símbolo del documento actual.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-"Buscar símbolos del espacio de trabajo.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-"Realizar la acción predeterminada para el siguiente elemento.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-"Realizar la acción predeterminada para el elemento anterior.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-"Reanudar la última lista de coc.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>i
+" acceso rápido a las acciones de CoCList
+" Administrar extensiones o conocer extensiones instaladas.
+nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
+" conocer y administrar snippets.
+nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
 
 " Explorer
 let g:coc_explorer_global_presets = {
@@ -154,6 +142,3 @@ let g:coc_explorer_global_presets = {
 \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
 \   }
 \ }
-
-nmap <Leader>ex :CocCommand explorer<CR>
-nmap <Leader>ef :CocCommand explorer --preset floating<CR>
