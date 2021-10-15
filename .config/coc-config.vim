@@ -1,3 +1,20 @@
+" TextEdit puede fallar si no se establece en oculto.
+set hidden
+
+" algunos servidores tienen problemas con los archivos de respaldo, consulte con #649.
+set nobackup
+set nowritebackup
+
+" dar más espacio a barra inferior de comandos.
+set cmdheight=1
+
+" ter un tiempo de actualización más largo (el valor predeterminado es 4000ms  4s) genera
+" retrasos y mala experiencia de usuario.
+set updatetime=300
+
+" no pases mensajes a |ins-completion-menu|
+set shortmess+=c
+
 " muestre siempre la columna del letrero; de lo contrario, el texto cambiaría cada vez
 " aparecen / se resuelven los diagnósticos.
 if has("patch-8.1.1564")
