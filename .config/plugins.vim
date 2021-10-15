@@ -13,7 +13,6 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral o árbol
 Plug 'scrooloose/nerdtree'
-Plug 'nvim-treesitter/nvim-treesitter'
 
 " otros complementos
 Plug 'easymotion/vim-easymotion'
@@ -27,11 +26,20 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 
-" Telescope
+" complemento telescope
 Plug 'nvim-lua/popup'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+
+" test
+"Plug 'tyewang/vimux-jest-test'
+"Plug 'janko-m/vim-test'
+
+" git
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-repeat'
+"Plug 'mhinz/vim-signify'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'
