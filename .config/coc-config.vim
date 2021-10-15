@@ -17,8 +17,8 @@ set shortmess+=c
 
 " muestre siempre la columna del letrero; de lo contrario, el texto cambiaría cada vez
 " aparecen / se resuelven los diagnósticos.
-if has("patch-8.1.1564")
-  " recientemente, vim puede fusionar columna de signo y columna de número en una
+if has("nvim-0.5.0") || has("patch-8.1.1564") 
+" recientemente, vim puede fusionar columna de signo y columna de número en una
   set signcolumn=number
 else
   set signcolumn=yes
@@ -48,6 +48,16 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
 " resalte el símbolo y sus referencias cuando mantenga presionado el cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
@@ -60,7 +70,7 @@ augroup mygroup
 augroup end
 
 " aplicar AutoFix al problema en la línea actual.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <Leader>qf  <Plug>(coc-fix-current)
 
 " asignar función y objetos de texto de clase
 " NOTA: Requiere compatibilidad con 'textDocument.documentSymbol' del servidor de idiomas.
@@ -94,21 +104,21 @@ command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImpo
 
 "Asignaciones para CoCList
 "Mostrar todos los diagnósticos.
-"nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 "Administrar extensiones.
-"nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 "Mostrar comandos.
-"nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 "Buscar símbolo del documento actual.
-"nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 "Buscar símbolos del espacio de trabajo.
-"nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 "Realizar la acción predeterminada para el siguiente elemento.
-"nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 "Realizar la acción predeterminada para el elemento anterior.
-"nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 "Reanudar la última lista de coc.
-"nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>i
+nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>i
 
 " Explorer
 let g:coc_explorer_global_presets = {
@@ -145,5 +155,5 @@ let g:coc_explorer_global_presets = {
 \   }
 \ }
 
-nmap <Leader>f :CocCommand explorer<CR>
-nmap <Leader>ff :CocCommand explorer --preset floating<CR>
+nmap <Leader>ex :CocCommand explorer<CR>
+nmap <Leader>ef :CocCommand explorer --preset floating<CR>
