@@ -1,123 +1,109 @@
-# Some useful Unicode entities
-# Non-Breaking Space
-snippet nbs
-	&nbsp;
-# ←
-snippet left
-	&#x2190;
-# →
-snippet right
-	&#x2192;
-# ↑
-snippet up
-	&#x2191;
-# ↓
-snippet down
-	&#x2193;
-# ↩
-snippet return
-	&#x21A9;
-# ⇤
-snippet backtab
-	&#x21E4;
-# ⇥
-snippet tab
-	&#x21E5;
-# ⇧
-snippet shift
-	&#x21E7;
-# ⌃
-snippet ctrl
-	&#x2303;
-# ⌅
-snippet enter
-	&#x2305;
-# ⌘
-snippet cmd
-	&#x2318;
-# ⌥
-snippet option
-	&#x2325;
-# ⌦
-snippet delete
-	&#x2326;
-# ⌫
-snippet backspace
-	&#x232B;
-# ⎋
-snippet esc
-	&#x238B;
+Al final de cada instrucción añada [endsnippet] para que pueda usarlo.
 # comment
 snippet //
-	<!-- ${1} -->${0}
-# HTML Doctype 4.01 Strict
-snippet docts
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-# HTML Doctype 4.01 Transitional
-snippet doct
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
+<!-- ${1} -->${0}
+endsnippet
+
 # HTML Doctype 5
-snippet doct5
-	<!DOCTYPE HTML>
-# XHTML Doctype 1.0 Frameset
-snippet docxf
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-# XHTML Doctype 1.0 Strict
-snippet docxs
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-# XHTML Doctype 1.0 Transitional
-snippet docxt
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-# XHTML Doctype 1.1
-snippet docx
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+snippet html5
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/.ico" type="image/png" />
+	<link rel="stylesheet" href="/.css">
+	<title>$1</title>
+</head>
+<body>
+	<header>
+		$2
+	</header>
+</body>
+</html>
+endsnippet
+
 # Attributes
 snippet attr
-	${1:attribute}="${0:property}"
+${1:attribute}="${0:property}"
+endsnippet
+
 snippet attr+
-	${1:attribute}="${2:property}" attr+
+${1:attribute}="${2:property}" attr+
+endsnippet
+
 snippet .
-	class="${1}"
+class="${1}"
+endsnippet
+
 snippet #
-	id="${1}"
+id="${1}"
+endsnippet
+
 snippet alt
-	alt="${1}"
+alt="${1}"
+endsnippet
+
 snippet charset
-	charset="${1:utf-8}"
+charset="${1:utf-8}"
+endsnippet
+
 snippet data
-	data-${1}="${2:$1}"
+data-${1}="${2:$1}"
+endsnippet
+
 snippet for
-	for="${1}"
+for="${1}"
+endsnippet
+
 snippet height
-	height="${1}"
+height="${1}"
+endsnippet
+
 snippet href
-	href="${1:#}"
+href="${1:#}"
+endsnippet
+
 snippet lang
-	lang="${1:en}"
+lang="${1:en}"
+endsnippet
+
 snippet media
-	media="${1}"
+media="${1}"
+endsnippet
+
 snippet name
-	name="${1}"
+name="${1}"
+endsnippet
+
 snippet rel
-	rel="${1}"
+rel="${1}"
+endsnippet
+
 snippet scope
-	scope="${1:row}"
+cope="${1:row}"
+
+
 snippet src
-	src="${1}"
+src="${1}"
+
+
 snippet title=
-	title="${1}"
+title="${1}"
+
+
 snippet type
-	type="${1}"
+type="${1}"
+
+
 snippet value
-	value="${1}"
+value="${1}"
+
+
 snippet width
-	width="${1}"
+width="${1}"
+
 # Elements
 snippet a
 	<a href="${1:#}">${0:$1}</a>
