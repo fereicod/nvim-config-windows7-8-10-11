@@ -27,7 +27,7 @@ let g:lightline = {
       \}
 
 " si utilizas el autocompletado KITE descomenta la linea 30
-"let g:kite_supported_languages = ['nombre-del-lenguaje']
+"let g:kite_supported_languages = ['nombre-de-los-lenguajes']
 let g:coc_global_extensions = [
     \ 'coc-tsserver'
     \ ]
@@ -45,7 +45,7 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 
 " configuración para UltiSnips si llegas a instalarlo. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/snips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/snips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-<>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
