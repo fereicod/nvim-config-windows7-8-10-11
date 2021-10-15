@@ -96,3 +96,5 @@ function! OpenTerminal()
     startinsert!
   endif
 endfunction
+
+"*------------------------- CONFIGURACIÓN DE COC -------------------------*
