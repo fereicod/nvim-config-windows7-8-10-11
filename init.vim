@@ -1,4 +1,4 @@
-"*----------- Configuración [init.vim] 11/Junio/2021 6:43a.m COL -----------*
+"*----------- Configuración [init.vim] 28/Febrero/2021 6:56a.m COL -----------*
 
 							"██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
 							"██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
@@ -10,10 +10,10 @@
 									 " twitter >> https://twitter.com/Josueromram
 
 " Importo los archivos de configuración
-so ~/AppData/Local/nvim/config/plugins-config.vim
-so ~/AppData/Local/nvim/config/plugins.vim
-so ~/AppData/Local/nvim/config/shortcuts.vim
-so ~/AppData/Local/nvim/config/coc-config.vim
+so ~/AppData/Local/nvim/.config/plugins-config.vim
+so ~/AppData/Local/nvim/.config/plugins.vim
+so ~/AppData/Local/nvim/.config/shortcuts.vim
+so ~/AppData/Local/nvim/.config/coc-config.vim
 
 syntax enable
 set number
