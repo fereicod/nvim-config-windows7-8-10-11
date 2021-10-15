@@ -1,4 +1,4 @@
-snippet javaclass "JavaClass"
+snippet Class "JavaClass"
 ${3}
 
 public class $1 {
@@ -8,7 +8,7 @@ public class $1 {
 	}
 }
 endsnippet
-snippet javamainclass "JavaMainClass"
+snippet MainClass "JavaMainClass"
 ${3}
 
 public class $1 {
@@ -22,7 +22,7 @@ public class $1 {
 	}
 }
 endsnippet
-snippet javaclassoop "JavaClassOop"
+snippet ClassOop "JavaClassOop"
 
 /*
   Utility
@@ -65,42 +65,64 @@ snippet om
 @OneToMany${1:(cascade=CascadeType.ALL)}
 ${0}
 endsnippet
-snippet oo
-@OneToOne
-${1}
+
+## Methods for data entry
+snippet nexI
+sc.nextInt();$1
+endsnippet
+snippet nexF
+sc.nextFloat();$1
+endsnippet
+snippet nexS
+sc.nextLine();$1
+endsnippet
+snippet nexD
+sc.nextDouble();$1
+endsnippet
+snippet nexC
+sc.next().charAt(0);$1
+endsnippet
+snippet nexB
+sc.nextByte();$1
+endsnippet
+snippet nexH
+sc.nextShort();$1
+endsnippet
+snippet nexL
+sc.nextLong();$1
+endsnippet
+
+## Arrangement
+snippet arr
+int[] arr = new int[$1];
+$2
 endsnippet
 
 ## Basic Java packages and import
-snippet imp
-import java$1;
+snippet ijb
+import java.beans.$1;
 endsnippet
-snippet j.b
-java.beans.$1;
+snippet iji
+import java.io.$1;
 endsnippet
-snippet j.i
-java.io.$1;
+snippet ijm
+import java.math.$1;
 endsnippet
-snippet j.m
-java.math.$1;
+snippet ijxs
+import javax.swing.$1;
 endsnippet
-snippet jx.s
-javax.swing.$1;
-endsnippet
-snippet j.u
-java.util.$1;
+snippet iju
+import java.util.$1;
 endsnippet
 
 ## Class
-snippet cl
-class ${1:`vim_snippets#Filename("$1", "untitled")`} ${0}
-endsnippet
 snippet pcl
 public class ${1:`vim_snippets#Filename("$1", "untitled")`} ${0}
 endsnippet
 snippet in
 interface ${1:`vim_snippets#Filename("$1", "untitled")`} ${2:extends Parent}
 endsnippet
-snippet tc
+snippet pce
 public class ${1:`vim_snippets#Filename("$1")`} extends ${0:TestCase}
 endsnippet
 
@@ -446,8 +468,8 @@ snippet sc "Scanner sc = new Scanner(System.in);"
 Scanner sc = new Scanner(System.in);
 $1
 endsnippet
-snippet arrto "Arrays.toString(arr);"
-Arrays.toString($1);
+snippet arrto "Arrays.toString(arreglo)"
+Arrays.toString($1)
 endsnippet
 snippet ins "new instance"
 $1 $2 = new $1($3);

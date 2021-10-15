@@ -1,11 +1,63 @@
 {
+  // [coc.nvim] solución del error E:319
+  
+
+  // Snippets
+  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/UltiSnips",
+  "snippets.shortcut": "S",
+  "snippets.autoTrigger": true,
+  "snippets.triggerCharacters": [],
+  "snippets.loadFromExtensions": true,
+  "snippets.textmateSnippetsRoots": ["~/.config/nvim/UltiSnips/textmate"],
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.usePythonx": true,
+  "snippets.ultisnips.directories": ["UltiSnips"],
+  "snippets.snipmate.enable": true,
+  "snippets.snipmate.author": "Josué Romero",
   "snippets.ultisnips.usePythonx": false,
-  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/snips/",
-  "yaml.format.enable": true,
-  "yaml.format.singleQuote": true,
-  "yaml.schemas": {
-    "kubernetes": "/*.yaml"
-  },
+  "snippets.priority": 1,
+
+  // settings coc-snippets
+  {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"],
+      "snippets.ultisnips.directories": [
+        "UltiSnips",
+        "SirVer/ultisnips"
+      ],
+  }
+
+  // Java
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-15",
+      "path": "D:\Program Files\Java\jdk-15.0.2\bin\javac.exe",
+      "default": true
+    }
+  ],
+
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.selectionRange.enabled": true,
+
+  // Javascript and TypeScript
+  "typescript.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+
+  // Python
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "black",
+  // "python.formatting.blackPath": "black",
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
+
+  // Coc
   "coc.preferences.formatOnSaveFiletypes": [
 		"html",
     "css",
@@ -39,6 +91,8 @@
   "coc.preferences.extensionUpdateCheck": "daily",
   "coc.source.around.firstMatch": false,
   "coc.source.file.ignoreHidden": false,
+  "coc.source.file.priority": 60,
+  "coc.source.buffer.priority": 50,
   "diagnostic-languageserver.debug": true,
   "diagnostic.errorSign": "",
   "diagnostic.warningSign": "",
@@ -47,61 +101,25 @@
   "diagnostic.format": "%message",
   "diagnostic.virtualText": false,
   "diagnostic.checkCurrentLine": true,
+  "yank.priority": 10,
 
   "signature.target": "echo",
+  "suggest.highPrioritySourceLimit": 10,
+  "suggest.languageSourcePriority": 95,
+  "suggest.lowPrioritySourceLimit": 90,
   "suggest.timeout": 5000,
   "suggest.asciiCharactersOnly": true,
-
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "filetypes": ["go"]
-    },
-    "vimls": {
-      "module": "/usr/lib/node_modules/vim-language-server/bin/index.js",
-      "args": ["--node-ipc"],
-      "initializationOptions": {
-        "isNeovim": true,
-        "iskeyword": "@,48-57,_,192-255,-#",
-        "vimruntime": "",
-        "runtimepath": "",
-        "diagnostic": {
-          "enable": true
-        },
-        "indexes": {
-          "runtimepath": true,
-          "gap": 100,
-          "count": 3,
-          "projectRootPatterns": [
-            "strange-root-pattern",
-            ".git",
-            "autoload",
-            "plugin"
-          ]
-        },
-        "suggest": {
-          "fromVimruntime": true,
-          "fromRuntimepath": false
-        }
-      },
-      "filetypes": ["vim"]
-    },
-    "ccls": {
-      "command": "ccls",
-      "trace.server": "verbose",
-      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-      "rootPatterns": [
-        ".ccls",
-        "compile_commands.json",
-        ".vim/",
-        ".git/",
-        ".hg"
-      ],
-      "initializationOptions": {
-        "cache": { "directory": "/tmp/ccls" },
-        "client": { "snippetSupport": true }
-      }
-    }
-  }
+  "suggest.autoTrigger": "always",
+  "suggest.localityBonus": true,
+  "suggest.fixInsertedWord": true,
+  "suggest.enablePreselect": true,
+  "suggest.removeDuplicateItems": true,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "suggest.defaultSortMethod": "alphabetical",
+  "suggest.numberSelect": false,
+  "suggest.triggerAfterInsertEnter": false,
+  "suggest.detailField": "menu",
+  "suggest.keepCompleteopt": false,
+  "suggest.noselect": false,
+  "suggest.triggerCompletionWait": 30,
 }
