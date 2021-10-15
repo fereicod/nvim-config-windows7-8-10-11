@@ -45,7 +45,7 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 
 " configuración para UltiSnips si llegas a instalarlo. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/snips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-<>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
