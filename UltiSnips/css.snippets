@@ -1,25 +1,30 @@
+## Al final de cada instrucción debes añadir [endsnippet] para que puedas utilizar los snippet
+## ejemplo de la línea 2 hasta la 7
 snippet . "selector { }"
 	${1} {
 		${2:${VISUAL}}
 	}${0}
+endsnippet
+
 snippet ! "!important"
-	 !important
+!important
+	 
 snippet bdi:m+
-	-moz-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};${0}
+-moz-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};${0}
 snippet bdi:m
-	-moz-border-image: ${1};${0}
+-moz-border-image: ${1};${0}
 snippet bdrz:m
-	-moz-border-radius: ${1};${0}
+-moz-border-radius: ${1};${0}
 snippet bxsh:m+
-	-moz-box-shadow: ${1:0} ${2:0} ${3:0} #${4:000};${0}
+-moz-box-shadow: ${1:0} ${2:0} ${3:0} #${4:000};${0}
 snippet bxsh:m
-	-moz-box-shadow: ${1};${0}
+-moz-box-shadow: ${1};${0}
 snippet bdi:w+
-	-webkit-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};${0}
+-webkit-border-image: url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch};${0}
 snippet bdi:w
-	-webkit-border-image: ${1};${0}
+-webkit-border-image: ${1};${0}
 snippet bdrz:w
-	-webkit-border-radius: ${1};${0}
+-webkit-border-radius: ${1};${0}
 snippet bxsh:w+
 	-webkit-box-shadow: ${1:0} ${2:0} ${3:0} #${4:000};${0}
 snippet bxsh:w
