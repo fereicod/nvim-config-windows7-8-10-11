@@ -95,14 +95,12 @@ endif
 
 "Agregar comando`: Format` para formatear el búfer actual.
 command! -nargs=0 Format :call CocAction('format')
-
 "Agregar`: comando Doblar` para doblar el búfer actual.
 command! -nargs=? Fold :call CocAction('fold', <f-args>)
-
 "Agregar comando`: OR` para organizar las importaciones del búfer actual.
 command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImport')
 
-" acceso rápido a las acciones de CoCList
+" acceso rápido a las funcionalidades de CoCList
 " Administrar extensiones o conocer extensiones instaladas.
 nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
 " conocer y administrar snippets.
