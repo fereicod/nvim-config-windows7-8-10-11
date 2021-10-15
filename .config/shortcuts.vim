@@ -1,16 +1,12 @@
 let mapleader = " "
 
-" salir del modo INSERT con Esc, jk o ctrl+c 
+" salir del modo INSERT con [Esc, jk o ctrl+c] 
 imap jk <Esc>
 imap <C-c> <Esc>l
 
 " desplazamiento rápido con ctr+e y ctrl+y
 nnoremap <C-k> 10 <C-e>
 nnoremap <C-j> 10 <C-y>
-
-" ajustar tamaño de los búfer o pestañas divididas
-nnoremap <F6> 25 <C-w><
-nnoremap <F7> 25 <C-w>>
 
 " coloca un punto y coma al final de línea situada
 nnoremap <Leader>; $a;<Esc>
@@ -22,8 +18,6 @@ nnoremap <Leader>d :!node %<CR>
 nnoremap <Leader>t :call OpenTerminal()<CR>
 nnoremap <C-t> :call OpenTerminal()<CR>
 
-" actualiza configuración de neovim
-nmap <F5> :source ~/AppData/Local/nvim/init.vim<CR>
 " para guardar archivos
 nnoremap <Leader>w :w<CR>
 " para cerrar algun búfer o pestaña
@@ -62,6 +56,11 @@ nnoremap <Leader>vv :vsp<CR>
 nnoremap <F3> :%s#\s\+$##<CR>
 " crea un nuevo archivo en la ruta posicionada
 nnoremap <F4> :tabnew 
+" actualiza configuración de neovim
+nmap <F5> :source ~/AppData/Local/nvim/init.vim<CR>
+" ajustar tamaño del búfer o pestaña dividida
+nnoremap <F6> 25 <C-w><
+nnoremap <F7> 25 <C-w>>
 
 " navegación entre tabs o pestañas abiertas
 nnoremap <silent><S-TAB> :bprevious<CR>
