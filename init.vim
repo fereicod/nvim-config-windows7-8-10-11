@@ -40,13 +40,6 @@ set tabstop=2
 set termguicolors
 set splitbelow
 set splitright
-set hidden
-set nobackup
-set noerrorbells
-set noswapfile
-set nowritebackup
-set updatetime=300
-set shortmess+=c
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 autocmd FileType scss setl iskeyword+=@-@
