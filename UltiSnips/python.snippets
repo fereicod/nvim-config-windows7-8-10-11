@@ -1,34 +1,26 @@
-snippet #!
-	#!/usr/bin/env python3
-snippet #!2
-	#!/usr/bin/env python2
-	# -*- coding: utf-8 -*-
-snippet #!3
-	#!/usr/bin/env python3
-snippet imp
-	import ${0:module}
-snippet uni
-	def __unicode__(self):
-		${0:representation}
-snippet from
-	from ${1:package} import ${0:module}
+## Al final de cada instrucción debes añadir [endsnippet] para que puedas utilizar los snippet
+## ejemplo de la línea 4 hasta la 12
 # Module Docstring
 snippet docs
-	"""
-	File: ${1:`vim_snippets#Filename('$1.py', 'foo.py')`}
-	Author: `g:snips_author`
-	Email: `g:snips_email`
-	Github: `g:snips_github`
-	Description: ${0}
-	"""
+"""
+File: ${1:`vim_snippets#Filename('$1.py', 'foo.py')`}
+Author: `g:snips_author`
+Email: `g:snips_email`
+Github: `g:snips_github`
+Description: ${0}
+"""
+endsnippet
 
 # Unittest skip
 snippet sk "skip unittests" b
-	@unittest.skip(${1:skip_reason})
+@unittest.skip(${1:skip_reason})
+endsnippet
 
 snippet wh
-	while ${1:condition}:
-		${0:${VISUAL}}
+while ${1:condition}:
+	${0:${VISUAL}}
+endsnippet
+
 # dowh - does the same as do...while in other languages
 snippet dowh
 	while True:
