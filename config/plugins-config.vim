@@ -27,13 +27,13 @@ let g:lightline = {
       \}
 
 " si utilizas el autocompletado KITE descomenta la linea 30
-"let g:kite_supported_languages = ['*']
+"let g:kite_supported_languages = ['nombre-del-lenguaje']
 let g:coc_global_extensions = [
     \ 'coc-tsserver'
     \ ]
 " si requieres obtener otras extensiones de autocompletado visita el
 " repositorio en github: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions 
-let g:loaded_python3_provider = 0
+let g:loaded_python3_provider=0
 
 " cerrar automaticamente la barra lateral o árbol
 let NERDTreeShowHidden=1
@@ -45,22 +45,22 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 
 " configuración para UltiSnips si llegas a instalarlo. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/snips']
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsListSnippets="<C-<>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-"let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/snips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<C-<>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsEditSplit="vertical"
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
 
 " vim-devicons
-if exists("g:loaded_webdevicons")
-  call webdevicons#refresh()
-endif
+"if exists("g:loaded_webdevicons")
+"  call webdevicons#refresh()
+"endif
 
-" funtion OpenTerminal()
+" función para poder abrir la terminal
 function! OpenTerminal()
   " mover al búfer hacia la derecha
   execute "normal \<C-l>"
@@ -75,9 +75,9 @@ function! OpenTerminal()
     " cerrar terminal existente
     execute "q"
   else
-    " abrir terminal cmd, pero si usted utiliza otra terminal, en vez de cmd
-    " ponga el nombre del .exe o ejecutable 'zsh, bash, iTerm', quedando la
-    " línea (83) así: execute 'vsp term://zsh'
+    " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
+    " poner el nombre del .exe o ejecutable ya sea: 'zsh, bash, iTerm', quedando la
+    " línea (81) así: execute 'vsp term://zsh'
     execute "vsp term://cmd"
 
     " apagar números
