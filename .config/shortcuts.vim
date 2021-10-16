@@ -1,6 +1,6 @@
 let mapleader = " "
 
-" salir del modo INSERT con [Esc, jk o ctrl+c] 
+" salir del modo INSERT con [Esc, jk o ctrl+c]
 imap jk <Esc>
 imap <C-c> <Esc>l
 
@@ -27,6 +27,7 @@ nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
+
 " encuentra archivos usando el azúcar de línea de comandos Telescope.
 nnoremap <Leader>f <cmd>Telescope find_files<CR>
 nnoremap <Leader>fl <cmd>Telescope live_grep<CR>
@@ -49,9 +50,9 @@ nnoremap <Leader>vv :vsp<CR>
 " utilice <F2> para mostrar la documentación en la ventana de vista previa.
 nnoremap <F2> :call <SID>show_documentation()<CR>
 " eliminar todos los espacios vacíos que hayan en el archivo
-nnoremap <F3> :%s#\s\+$##<CR>
+nnoremap <F3> :g/^\s\+$/s/\s\+//<CR>
 " crea un nuevo archivo en la ruta posicionada
-nnoremap <F4> :tabnew 
+nnoremap <F4> :tabnew
 " actualiza configuración de neovim
 nmap <F5> :source ~/AppData/Local/nvim/init.vim<CR>
 " ajustar tamaño del búfer o pestaña dividida

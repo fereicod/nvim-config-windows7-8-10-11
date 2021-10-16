@@ -1,5 +1,5 @@
 " desabilito el resaltado de sintaxis para esos lenguajes
-"let g:polyglot_disable=['typescript', 'javascript', 'css', 'html', 'txt', 'markdown']
+let g:polyglot_disable=['typescript', 'css', 'html', 'txt', 'markdown']
 
 " configuración de la barra de estado Lightlane
 let g:lightline = {
@@ -43,20 +43,40 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " configuración para UltiSnips. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsJumpForwardTrigger="<C-b"
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsListSnippets="<C-<>"
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
 
-" vim-devicons
-"if exists("g:loaded_webdevicons")
+"*--------------------------- SOLUCIÓN CONTRA EL ERROR [coc.nvim] E319 --------------------------*
+" SI TE APARECE ESTE ERROR CADA VEZ QUE HABRES NVIM, TE COMPARTO LA SOLUCIÓN.
+" [coc.nvim] Error on execute python script: request error nvim_command - Vim(py3file):
+" E319: No 'python' provider found. Run ':checkhealth provider'
+
+" Ese error aparece porque tenemos instalado el complemento: Plug 'neoclide/coc.nvim' que es muy especial
+" para el autocompletado; el requiere para su funcionamiento derivados de host de Python, dicho de otra manera,
+" el sin Python instalado en el PC no será tan eficiente, ¡Si aún no tienes Python instaldo ve y instalalo de su pagína oficial!
+" [link: https://www.python.org/downloads/], una vez lo instales añade esta línea al archivo de configuración [init.vim]
+
+" si añades la dirección del host de Python aquí, se soluciona el molesto error:
+" [coc.nvim] Error on execute python script: request error nvim_command - Vim(py3file):
+" E319: No 'python' provider found. Run ':checkhealth provider'
+let g:python3_host_prog = 'D:\Program Files\Python\Python310\python.exe'
+
+" Debes añadir la ruta donde tengas el ejecutable: [python.exe], para que así
+" culmines con la solución, gracias por leer, soy Josué Romero de Colombia.
+"*-----------------------------------------------------------------------------------------------*
+
+" si llegas a instalar [vim-devicons], debes instalar un fuente especifica como lo pueden ser [Hack Mono NertFont, JetBrains Mono
+" Nert Font, etc] para que así puedas ver los iconos en el árbol y no símbolos extraños.
+" if exists("g:loaded_webdevicons")
 "  call webdevicons#refresh()
 "endif
 
