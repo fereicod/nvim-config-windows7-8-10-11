@@ -22,6 +22,7 @@ set showcmd
 set ruler
 set encoding=utf-8
 set termencoding=utf-8
+set termguicolors
 set showmatch
 set sw=2
 set relativenumber
@@ -35,7 +36,6 @@ set incsearch
 set ignorecase
 set smartcase
 set tabstop=2
-set termguicolors
 set splitbelow
 set splitright
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

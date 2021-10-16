@@ -1,7 +1,4 @@
 {
-  // [coc.nvim] solución del error E:319
-  
-
   // Snippets
   "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/UltiSnips",
   "snippets.shortcut": "S",
@@ -17,7 +14,7 @@
   "snippets.ultisnips.usePythonx": false,
   "snippets.priority": 1,
 
-  // settings coc-snippets
+  // Settings coc-snippets
   {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
