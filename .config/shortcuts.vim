@@ -27,6 +27,7 @@ nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
+map <Leader>p :Explore<CR>
 
 " encuentra archivos usando el azúcar de línea de comandos Telescope.
 nnoremap <Leader>f <cmd>Telescope find_files<CR>

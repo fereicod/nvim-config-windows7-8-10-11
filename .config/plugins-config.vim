@@ -46,10 +46,10 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 " configuración para UltiSnips. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
-"let g:UltiSnipsEditSplit="vertical"
-"let g:UltiSnipsJumpForwardTrigger="<C-b"
-"let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsJumpForwardTrigger="<C-b"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
@@ -67,7 +67,7 @@ let g:tmux_navigator_no_mappings=1
 " si añades la dirección del host de Python aquí, se soluciona el molesto error:
 " [coc.nvim] Error on execute python script: request error nvim_command - Vim(py3file):
 " E319: No 'python' provider found. Run ':checkhealth provider'
-let g:python3_host_prog = 'D:\Program Files\Python\Python310\python.exe'
+"let g:python3_host_prog = 'D:\Program Files\Python\Python310\python.exe'
 
 " Debes añadir la ruta donde tengas el ejecutable: [python.exe], para que así
 " culmines con la solución, gracias por leer, soy Josué Romero de Colombia.
