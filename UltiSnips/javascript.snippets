@@ -1,12 +1,12 @@
-snippet cl "console.log()" b
+snippet cl "console.log('$1', $2)" b
 console.log('$1', $2);
 endsnippet
 
-snippet cd "console.debug()" b
+snippet cd "console.debug('$1', $2)" b
 console.debug('$1', $2);
 endsnippet
 
-snippet ct "console.time()" b
+snippet ct "console.time('$1', $2)" b
 console.time('$1', $2);
 endsnippet
 
@@ -14,8 +14,12 @@ snippet imp "import from ''" b
 import ${2:{ $3 }} from '$1'
 endsnippet
 
-snippet c "const {datatype JS}" b
-const $1 = $2;
+snippet mat "Math.$1($2)"
+Math.$1($2)
+endsnippet
+
+snippet c "const $1 = $2" b
+const $1 = $2
 endsnippet
 
 snippet ed "import from ''" b
@@ -58,7 +62,7 @@ const ${1:{ $2 }} = ${3:{
 }}
 endsnippet
 
-snippet arr "= []" b
+snippet arr " const $1 = [ ${2} ]" b
 const $1 = [
   $2
 ]
@@ -68,45 +72,95 @@ snippet des "const {} =" b
 const { $1 } = $2
 endsnippet
 
-snippet rfc "React function component" b
-const $1 = ${2:($3)} => {
-  return (
-    <$4>
-      $5
-    </$4>
-  )
+snippet if "if ($1) { ${2} }"
+if ($1) {
+  ${2}
 }
-
-export default $1
 endsnippet
 
-snippet rnfc "React native function component" b
-import React from 'react'
-import { ${4} } from 'react-native'
-
-const $1 = ${2:($3)} => {
-  return (
-    <$4>
-      $5
-    </$4>
-  )
+snippet ifel "if ($1) { ${2} } else { ${3} }"
+if ($1) {
+  ${2}
+} else {
+  ${3}
 }
-
-export default $1
 endsnippet
 
-snippet rcc "React class component" b
-import { Component } from 'react'
-
-class $1 extends Component {
-  render() {
-    return (
-      <div>
-        ${2:// here...}
-      </div>
-    )
-  }
+snippet ifelre "if ($1) { ${2} } else { ${3} } return $4"
+if ($1) {
+  ${2}
+} else {
+  ${3}
 }
+return $4;
+endsnippet
 
-export default $1
+snippet else "else { ${2} }"
+else {
+  ${1}
+}
+endsnippet
+
+snippet for "for (...) { ${3} }"
+for ($1 = 0; $1 $2; $1++) {
+  ${3}
+}
+endsnippet
+
+snippet fori "for (i = 0; i < $1; i++) { ${2} } return $3"
+for (i = 0; i < $1; i++) {
+  ${2}
+}
+return $3;
+endsnippet
+
+snippet re "return"
+return $1;
+endsnippet
+
+snippet replace "replace(/s\g/, ' ');"
+replace(/s\g/, ' ');$1
+endsnippet
+
+snippet  "toLowerCase();"
+toLowerCase();$1
+endsnippet
+
+snippet  "split('');"
+split('');$1
+endsnippet
+
+snippet  "join('');"
+join('');$1
+endsnippet
+
+snippet  "reduce()"
+reduce($1)
+endsnippet
+
+snippet  "concat()"
+concat($1)
+endsnippet
+
+snippet  "reversed();"
+reversed();$1
+endsnippet
+
+snippet push "push($1);"
+push($1);$2
+endsnippet
+
+snippet unde "undefined"
+undefined
+endsnippet
+
+snippet objent "Object.entries($1).reduce((acc, el) => acc[1] > el[1] ? acc : el);"
+Object.entries($1).reduce((acc, el) => acc[1] > el[1] ? acc : el);
+endsnippet
+
+snippet /* "JSDoc"
+/*
+- @author Josué Romero
+- @date `!v strftime("%d/%m/%Y")` COL 
+*/
 endsnippet

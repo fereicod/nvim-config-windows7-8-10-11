@@ -9,6 +9,11 @@ public class $1 {
 }
 endsnippet
 snippet javamainclass "JavaMainClass"
+/*
+- @author Josué Romero
+- @date `!v strftime("%d/%m/%Y")` COL
+*/
+
 ${3}
 
 public class $1 {
@@ -23,7 +28,6 @@ public class $1 {
 }
 endsnippet
 snippet javaoppclass "JavaClass for OOP"
-
 /*
   Utility
 */
@@ -38,177 +42,204 @@ public class $1 {
 }
 endsnippet
 
-snippet pr
+## Encapsulation
+snippet pr "private"
 private ${0}
 endsnippet
-snippet po
+snippet po "protected"
 protected ${0}
 endsnippet
-snippet pu
+snippet pu "public"
 public ${0}
 endsnippet
 
 ## Annotations
-snippet before
+snippet before "static void ${1:intercept}(${2:args}) { ${0} }"
 @Before
 static void ${1:intercept}(${2:args}) { ${0} }
 endsnippet
-snippet mm
+snippet mm "ManyToMany"
 @ManyToMany
 ${0}
 endsnippet
-snippet mo
+snippet mo "ManyToOne"
 @ManyToOne
 ${0}
 endsnippet
-snippet om
+snippet om "OneToMany"
 @OneToMany${1:(cascade=CascadeType.ALL)}
+${0}
+endsnippet
+snippet om "OneToOne"
+@OneToOne${1:(cascade=CascadeType.ALL)}
 ${0}
 endsnippet
 
 ## Methods for data entry
-snippet nexI
-sc.nextInt();$1
+snippet nexi "sc.nextInt();"
+sc.nextInt();
+$1
 endsnippet
-snippet nexF
-sc.nextFloat();$1
+snippet nexf "sc.nextFloat();"
+sc.nextFloat();
+$1
 endsnippet
-snippet nexS
-sc.nextLine();$1
+snippet nexs "sc.nextLine();"
+sc.nextLine();
+$1
 endsnippet
-snippet nexD
-sc.nextDouble();$1
+snippet nexd "sc.nextDouble();"
+sc.nextDouble();
+$1
 endsnippet
-snippet nexC
-sc.next().charAt(0);$1
+snippet nexc "sc.next().charAt(0);"
+sc.next().charAt(0);
+$1
 endsnippet
-snippet nexB
-sc.nextByte();$1
+snippet nexb "sc.nextByte();"
+sc.nextByte();
+$1
 endsnippet
-snippet nexH
-sc.nextShort();$1
+snippet nexh "sc.nextShort();"
+sc.nextShort();
+$1
 endsnippet
-snippet nexL
-sc.nextLong();$1
+snippet nexl "sc.nextLong();"
+sc.nextLong();
+$1
 endsnippet
 
 ## Arrangement
-snippet arr
-int[] arr = new int[$1];
+snippet arr "${1:int} arr = new ${1:int}[$2];"
+${1:int}[] arr = new ${1:int}[$2];
+$3
+endsnippet
+snippet len "length"
+length
+endsnippet
+snippet arrto "Arrays.toString(nameArray)"
+Arrays.toString($1)
+endsnippet
+snippet arrso "Arrays.sort(nameArray);"
+Arrays.sort($1);
 $2
+endsnippet
+snippet arrbi "Arrays.binarySearch(byte[] a, byte key)"
+Arrays.binarySearch(int[] ${0:nombreDelArreglo}, int ${1:numeroABuscar});
+$2
+endsnippet
+snippet arrde  "Arrays.deepToString(Object[] a)"
+Arrays.deepToString(String[] ${0:nombreDelArreglo});$1
+endsnippet
+snippet ins "Rellenar instancia"
+$1 $2 = new $1($3);
+$4
 endsnippet
 
 ## Basic Java packages and import
-snippet ijb
-import java.beans.$1;
+snippet ij "import java.$1;"
+import java.$1;
 endsnippet
-snippet iji
+snippet iji "import java.io.$1;"
 import java.io.$1;
 endsnippet
-snippet ijm
+snippet ijm "import java.math.$1;"
 import java.math.$1;
 endsnippet
-snippet ijxs
+snippet ijxs "import java.swing.$1;"
 import javax.swing.$1;
 endsnippet
-snippet iju
+snippet iju "import java.util.$1;"
 import java.util.$1;
 endsnippet
 
-## Class
-snippet pcl
-public class ${1:`vim_snippets#Filename("$1", "untitled")`} ${0}
-endsnippet
-snippet in
-interface ${1:`vim_snippets#Filename("$1", "untitled")`} ${2:extends Parent}
-endsnippet
-snippet pce
-public class ${1:`vim_snippets#Filename("$1")`} extends ${0:TestCase}
-endsnippet
-
 ## Class Enhancements
-snippet ext
+snippet ext "extends"
 extends ${0}
 endsnippet
-snippet imp
+snippet imp "implements"
 implements ${0}
 endsnippet
-snippet abs
+snippet abs "abstract"
 abstract ${0}
 endsnippet
-snippet int
+snippet int "interface"
 interface ${0}
 endsnippet
 
 ## Comments
-snippet /*
+snippet /* "JavaDoc"
 /*
- * @author Josué Romero
- * @date () COL
+- @author Josué Romero
+- @date `!v strftime("%d/%m/%Y")` COL
 */
 endsnippet
 
 ## Constants
-snippet co
+snippet co "static public final"
 static public final ${1:String} ${2:var} = ${3};
 endsnippet
-snippet cos
+snippet cos "static public final String"
 static public final String ${1:var} = "${2}";
 endsnippet
 
 ## Control Statements
-snippet case
+snippet case "case"
 case ${1}:
 	${0}
 endsnippet
-snippet def
+snippet def "default"
 default:
-	${0}
+	$1
 endsnippet
-snippet el
-else
+snippet el "else {$1}"
+else {
+	$1
+}
 endsnippet
-snippet eif
-else if (${1}) ${0}
+snippet elif "else if ($1) {$2}"
+else if ($1) {
+	$2
+}
 endsnippet
-snippet if
+snippet if "if ($1) {$2}"
 if (${1}) ${0}
 endsnippet
-snippet sw
-switch (${1}) {
-	${0}
+snippet sw "switch ($1) {$2}"
+switch ($1) {
+	$2
 }
 endsnippet
 
 ## Create a Method
-snippet m
+snippet method "Método para rellenar"
 ${1:void} ${2:method}(${3}) ${4:throws }
 endsnippet
 
 ## Create a Variable
-snippet v
+snippet var "Rellenar atributo"
 ${1:String} ${2:var}${3: = null}${4};
 endsnippet
 
 ## Declaration for ArrayList
-snippet d.al
-List<${1:Object}> ${2:list} = new ArrayList<$1>();${0}
+snippet d.al "List<Object> name = new ArrayList<Object>();"
+List<${1:Object}> ${2:nameList} = new ArrayList<$1>();${3}
 endsnippet
 ## Declaration for HashMap
-snippet d.hm
-Map<${1:Object}, ${2:Object}> ${3:map} = new HashMap<$1, $2>();${0}
+snippet d.hm "Map<Objects> nameMap = new HashMap<>();"
+Map<${1:Object}, ${2:Object}> ${3:name} = new HashMap<$1, $2>();$4
 endsnippet
 ## Declaration for HashSet
-snippet d.hs
-Set<${1:Object}> ${2:set} = new HashSet<$1>();${0}
+snippet d.hs "Set<Object> nameSet = new HashSet<>();"
+Set<${1:Object}> ${2:nameSet} = new HashSet<$1>();$3
 endsnippet
 ## Declaration for Stack
-snippet d.st
-Stack<${1:Object}> ${2:stack} = new Stack<$1>();${0}
+snippet d.st "Stack<Object> pila = new Stack<>();"
+Stack<${1:Object}> ${2:pila} = new Stack<$1>();$3
 endsnippet
 
 ## Singleton Pattern
-snippet singlet
+snippet singlet "Método Holder"
 private static class Holder {
 	private static final ${1:`vim_snippets#Filename("$1")`} INSTANCE = new $1();
 }
@@ -221,27 +252,24 @@ public static $1 getInstance() {
 endsnippet
 
 ## Enhancements to Methods, variables, classes, etc.
-snippet ab
-abstract ${0}
-endsnippet
-snippet fi
+snippet fi "final"
 final ${0}
 endsnippet
-snippet st
+snippet st "static"
 static ${0}
 endsnippet
-snippet sy
+snippet sy "synchronized"
 synchronized ${0}
 endsnippet
 
 ## Error Methods
-snippet err
+snippet err "System.err.print(message);"
 System.err.print("${0:Message}");
 endsnippet
-snippet errln
+snippet errln "System.err.println(message);"
 System.err.println("${0:Message}");
 endsnippet
-snippet errf
+snippet errf "System.err.printf(message, exception);"
 System.err.printf("${1:Message}", ${0:exception});
 endsnippet
 
@@ -273,78 +301,79 @@ endsnippet
 snippet asns
 assertNotSame("${1:Failure message}", ${2:expected}, ${3:actual});
 endsnippet
-snippet fa
+snippet fa "fail()"
 fail("${1:Failure message}");
 endsnippet
-snippet ca
+snippet ca "catch()"
 catch(${1:Exception} ${2:e}) ${0}
 endsnippet
-snippet thr
+snippet thr "throw"
 throw ${0}
 endsnippet
-snippet ths
+snippet ths "throws"
 throws ${0}
 endsnippet
-snippet try
+snippet try "try and catch}"
 try {
 	${0:${VISUAL}}
 } catch(${1:Exception} ${2:e}) {
 }
 endsnippet
-snippet tryf
+snippet tryf "try, catch and finally"
 try {
-	${0:${VISUAL}}
-} catch(${1:Exception} ${2:e}) {
+	${1}
+} catch(Exception ${2:e}) {
 } finally {
+	${3}
 }
 endsnippet
 
 ## Find Methods
-snippet findall
-List<${1:listName}> ${2:items} = $1.findAll();
+snippet findall "List<$1> items$2 = $1.findAll();$3"
+List<${1:listName}> ${2:items} = $1.findAll();$3
 endsnippet
-snippet findbyid
+snippet findbyid "${1:var} ${2:item} = $1.findById(${3});"
 ${1:var} ${2:item} = $1.findById(${3});
 endsnippet
 
-## Javadocs
-snippet @au
+## JavaDocs
+snippet @au "@autor "
 @author `system("grep \`id -un\` /etc/passwd | cut -d \":\" -f5 | cut -d \",\" -f1")`
 endsnippet
-snippet @br
+snippet @br "@brief "
 @brief ${0:Description}
 endsnippet
-snippet @fi
+snippet @fi "@file "
 @file ${0:`vim_snippets#Filename("$1")`}.java
 endsnippet
-snippet @pa
+snippet @pa "@param "
 @param ${0:param}
 endsnippet
-snippet @da
-@date ${0:date}
+snippet @da "@date "
+@date `!v strftime("%d-%m-%Y")`
 endsnippet
-snippet @re
+snippet @re "@return "
 @return ${0:param}
 endsnippet
 
 ## Logger Methods
-snippet debug
+snippet debug "Logger.debug();"
 Logger.debug(${1:param});
 endsnippet
-snippet error
+snippet error "Logger.error();"
 Logger.error(${1:param});
 endsnippet
-snippet info
+snippet info "Logger.info();"
 Logger.info(${1:param});
 endsnippet
-snippet warn
+snippet warn "Logger.warn();"
 Logger.warn(${1:param});
 endsnippet
 
 ## Loops
-snippet for
-for (${1}; ${2}; ${3}) {
-	${4}
+snippet for "for (int $1; $1 $2; $1++)"
+for (int $1; $1 $2; $1++) {
+	$3
 }
 endsnippet
 snippet fori "for (int i = 0; i < $1.length; i++) {body}"
@@ -352,78 +381,71 @@ for (int i = 0; i < $1.length; i++) {
 	${2}
 }
 endsnippet
-snippet wh
+snippet wh "while ($1) { ${2} }"
+int i = 0$0;
 while ($1) {
-	$2
+	${2}
 }
 endsnippet
 
 ## Main method
-snippet psvm
+snippet main "public static void main (String[] args) { ${0} }"
 public static void main (String[] args) {
-	${0}
-}
-endsnippet
-snippet main
-public static void main(String[] args) {
 	${0}
 }
 endsnippet
 
 ## Print Methods
-snippet s
-System.out.print("${0}");
+snippet s "System.out.print("");"
+System.out.print("$0");$1
 endsnippet
-snippet ss
-System.out.println("${0}");
+snippet ss "System.out.println("");"
+System.out.println("$0");$1
 endsnippet
-snippet print
-System.out.println("${0:Message}");
+snippet sf "System.out.prinf(message, args);"
+System.out.printf("${0:Message}", ${1:args});$2
 endsnippet
-snippet printf
-System.out.printf("${1:Message}", ${0:args});
-endsnippet
-snippet printlna
-System.out.println("$0: " + Arrays.toString($1));
+snippet ssar "System.out.println("$1: " + Arrays.toString($0));"
+System.out.println("$1: " + Arrays.toString($0));$2
 endsnippet
 
 ## Render Methods
-snippet ren
+snippet ren "render();"
 render(${1:param});
 endsnippet
-snippet rena
+snippet rena "renderArgs();"
 renderArgs.put("${1}", ${2});
 endsnippet
-snippet renb
+snippet renb "renderBinary();"
 renderBinary(${1:param});
 endsnippet
-snippet renj
+snippet renj "renderJSON();"
 renderJSON(${1:param});
 endsnippet
-snippet renx
+snippet renx "renderXml();"
 renderXml(${1:param});
 endsnippet
 
 ## Setter and Getter Methods
-snippet set
+snippet set "Método Set"
 ${1:public} void set${3:}(${2:String} ${0:}){
 	this.$4 = $4;
 }
 endsnippet
-snippet get
+snippet get "Método Get"
 ${1:public} ${2:String} get${3:}(){
 	return this.${0:};
 }
 endsnippet
 
 ## Terminate Methods or Loops
-snippet ca
+snippet ca "case"
 case $1: $2
 endsnippet
-snippet re
+snippet re "return"
 return ${0}
 endsnippet
-snippet br
+snippet br "break"
 break;
 endsnippet
 
@@ -451,12 +473,12 @@ public static void ${1:nameMethod}() {
 	$2
 }
 endsnippet
-snippet t
+snippet tes "public void test$1() throws Exception { ${0} }"
 public void test${1:Name}() throws Exception {
 	${0}
 }
 endsnippet
-snippet test
+snippet test "public void test$1() throws Exception { ${0} }"
 @Test
 public void test${1:Name}() throws Exception {
 	${0}
@@ -468,30 +490,34 @@ snippet sc "Scanner sc = new Scanner(System.in);"
 Scanner sc = new Scanner(System.in);
 $1
 endsnippet
-snippet arrto "Arrays.toString(arreglo)"
-Arrays.toString($1)
-endsnippet
-snippet ins "new instance"
-$1 $2 = new $1($3);
-$4
-endsnippet
 
 ## Miscellaneous
-snippet action
+snippet action "public static void ${1:index}(${2:args}) { ${0} }"
 public static void ${1:index}(${2:args}) { ${0} }
 endsnippet
-snippet rnf
+snippet rnf "notFound(${1:param});"
 notFound(${1:param});
 endsnippet
-snippet rnfin
+snippet rnfin "notFoundIfNull(${1:param});"
 notFoundIfNull(${1:param});
 endsnippet
-snippet rr
+snippet rr "redirect(${1:param});"
 redirect(${1:param});
 endsnippet
-snippet ru
+snippet ru "unauthorized(${1:param});"
 unauthorized(${1:param});
 endsnippet
-snippet unless
+snippet unless "(unless=${1:param});"
 (unless=${1:param});
+endsnippet
+
+## Class
+snippet pcl "public class nameFile() { ${0} }"
+	public class $1 { ${2} }
+endsnippet
+snippet pin "public interface nameFile() { ${0} }"
+	public interface $1
+endsnippet
+snippet her "public class $1() extends { ${2} }"
+	public class $1() extends { ${2} }
 endsnippet
