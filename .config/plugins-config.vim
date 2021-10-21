@@ -1,5 +1,5 @@
 " desabilito el resaltado de sintaxis para esos lenguajes
-let g:polyglot_disable=['typescript', 'css', 'html', 'txt', 'markdown']
+"let g:polyglot_disable=['typescript', 'css', 'html', 'markdown', 'java']
 
 " configuración de la barra de estado Lightlane
 let g:lightline = {
@@ -29,7 +29,6 @@ let g:lightline = {
 " si utilizas el autocompletado KITE descomenta la linea 30
 "let g:kite_supported_languages = ['nombre-de-los-lenguajes']
 let g:coc_global_extensions = [
-    \ 'coc-tsserver',
     \ 'coc-snippets'
     \ ]
 " si requieres obtener otras extensiones de autocompletado visita el
@@ -47,15 +46,15 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 " configuración para UltiSnips. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsJumpForwardTrigger="<C-b"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+"let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsJumpForwardTrigger="<C-b"
+"let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
 
-"*--------------------------- SOLUCIÓN CONTRA EL ERROR [coc.nvim] E319 --------------------------*
+"*---------------------------- SOLUCIÓN CONTRA EL ERROR [coc.nvim] ----------------------------*
 " SI TE APARECE ESTE ERROR CADA VEZ QUE HABRES NVIM, TE COMPARTO LA SOLUCIÓN.
 " [coc.nvim] Error on execute python script: request error nvim_command - Vim(py3file):
 " E319: No 'python' provider found. Run ':checkhealth provider'
@@ -80,7 +79,7 @@ let g:python3_host_prog = 'D:\Program Files\Python\Python310\python.exe'
 "  call webdevicons#refresh()
 "endif
 
-" función para poder abrir la terminal
+" función para poder abrir la terminal dentro de nvim
 function! OpenTerminal()
   " mover al búfer hacia la derecha
   execute "normal \<C-l>"
